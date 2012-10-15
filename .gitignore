@@ -1,14 +1,13 @@
-*.class
-
-# Package Files #
-*.jar
-*.war
-*.ear
+activemq/target
 .idea
-.settings
 *.iml
-target
-fwdir
-.springBeans
-.classpath
-.project
+ektorp/target
+gson/target
+jackson/target
+jsmpp/target
+kxml2/target
+lambdaj/target
+quartz/target
+smslib/target
+stax/target
+xstream/target
