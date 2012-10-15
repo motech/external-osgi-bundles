@@ -9,7 +9,11 @@
     <packaging>bundle</packaging>
     <name>kXML 2</name>
     <description>kXML 2 is a small XML pull parser based on the common XML pull API</description>
-
+    <parent>
+        <groupId>org.motechproject</groupId>
+        <artifactId>external-osgi-bundles</artifactId>
+        <version>0.14-SNAPSHOT</version>
+    </parent>
     <properties>
         <modules.root.dir>${basedir}/../..</modules.root.dir>
     </properties>

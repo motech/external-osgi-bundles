@@ -9,6 +9,11 @@
     <version>1.3.0</version>
     <name>ektorp</name>
     <description>ektorp library</description>
+    <parent>
+        <groupId>org.motechproject</groupId>
+        <artifactId>external-osgi-bundles</artifactId>
+        <version>0.14-SNAPSHOT</version>
+    </parent>
     <properties>
         <jdk.version>1.7</jdk.version>
     </properties>

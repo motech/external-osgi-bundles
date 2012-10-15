@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.motechproject</groupId>
-    <artifactId>motech</artifactId>
+    <artifactId>external-osgi-bundles</artifactId>
     <version>0.14-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>MOTECH</name>
@@ -12,7 +12,7 @@
         MOTECH is a software system from Grameen Foundation that harnesses the ubiquity
         of mobile phones to deliver and receive information from patient and caregivers.
     </description>
-	<modules>
+    <modules>
         <module>activemq</module>
         <module>ektorp</module>
         <module>gson</module>
@@ -24,8 +24,8 @@
         <module>smslib</module>
         <module>stax</module>
         <module>xstream</module>
-	</modules>
-	    <repositories>
+    </modules>
+    <repositories>
         <repository>
             <id>1motech-repo</id>
             <name>1MOTECH Maven Repository</name>
@@ -46,6 +46,19 @@
             <name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
             <url>http://repository.springsource.com/maven/bundles/external</url>
         </repository>
-		</repositories>
-
+    </repositories>
+    <distributionManagement>
+        <repository>
+            <id>motech.nexus</id>
+            <name>MOTECH Releases Repository</name>
+            <url>http://nexus.motechproject.org/content/repositories/releases</url>
+            <uniqueVersion>false</uniqueVersion>
+        </repository>
+        <snapshotRepository>
+            <id>motech.nexus</id>
+            <name>MOTECH Snapshots Repository</name>
+            <url>http://nexus.motechproject.org/content/repositories/snapshots</url>
+            <uniqueVersion>false</uniqueVersion>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
