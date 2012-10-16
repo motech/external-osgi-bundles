@@ -6,18 +6,22 @@
     <artifactId>external-osgi-bundles</artifactId>
     <version>0.14-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>MOTECH</name>
+    <name>MOTECH-external-bundles</name>
 
     <description>
         MOTECH is a software system from Grameen Foundation that harnesses the ubiquity
         of mobile phones to deliver and receive information from patient and caregivers.
     </description>
+	<properties>
+		<jdk.version>1.7</jdk.version>
+	</properties>
     <modules>
         <module>activemq</module>
         <module>ektorp</module>
         <module>gson</module>
         <module>jackson</module>
         <module>jsmpp</module>
+        <module>junit</module>
         <module>kxml2</module>
         <module>lambdaj</module>
         <module>quartz</module>
@@ -25,6 +29,35 @@
         <module>stax</module>
         <module>xstream</module>
     </modules>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>list-dependencies</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>resolve</goal>
+                        </goals>
+                        <configuration>
+                            <outputFile>target/dependencies.list</outputFile>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+			<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.5.1</version>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                </configuration>
+            </plugin>
+			</plugins>
+    </build>
     <repositories>
         <repository>
             <id>1motech-repo</id>
