@@ -14,18 +14,39 @@
         <artifactId>external-osgi-bundles</artifactId>
         <version>0.14-SNAPSHOT</version>
     </parent>
-    <properties>
-        <modules.root.dir>${basedir}/../..</modules.root.dir>
-    </properties>
-
     <dependencies>
+        <dependency>
+            <groupId>org.objectweb.howl</groupId>
+            <artifactId>com.springsource.org.objectweb.howl</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>com.springsource.javax.annotation</artifactId>
+            <version>1.0.0</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.activemq</groupId>
             <artifactId>activemq-core</artifactId>
-            <version>${project.version}</version>
+            <version>5.4.2</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-context</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>org.osgi.core</artifactId>
+                    <groupId>org.osgi</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.motechproject</groupId>
+            <artifactId>org.motechproject.osgi.it</artifactId>
+            <version>0.14-SNAPSHOT</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -38,6 +59,67 @@
                         <Export-Package>
                             org.apache.activemq.*;version=${project.version}
                         </Export-Package>
+                        <Import-Package>
+                            com.thoughtworks.xstream;resolution:=optional,
+                            com.thoughtworks.xstream.converters;resolution:=optional,
+                            com.thoughtworks.xstream.io;resolution:=optional,
+                            com.thoughtworks.xstream.io.json;resolution:=optional,
+                            com.thoughtworks.xstream.io.xml;resolution:=optional,
+                            javax.annotation;version="[1.0,2)",
+                            javax.jms;version="[1.1,2)",
+                            javax.management,
+                            javax.management.j2ee.statistics;version="[1.1,2)",
+                            javax.management.openmbean,
+                            javax.management.remote,
+                            javax.naming,
+                            javax.naming.directory,
+                            javax.naming.event,
+                            javax.naming.spi,
+                            javax.net,
+                            javax.net.ssl,
+                            javax.security.auth,
+                            javax.security.auth.callback,
+                            javax.security.auth.login,
+                            javax.security.auth.spi,
+                            javax.sql,
+                            javax.transaction.xa,
+                            javax.xml.parsers,
+                            javax.xml.stream;resolution:=optional,
+                            org.apache.activeio.journal;resolution:=optional;version="[3.1,4)",
+                            org.apache.activeio.journal.active;resolution:=optional;version="[3.1,4)",
+                            org.apache.activeio.packet;resolution:=optional;version="[3.1,4)",
+                            org.apache.commons.logging,
+                            org.apache.commons.net.ftp;resolution:=optional;version="[2.0,3)",
+                            org.apache.derby.jdbc;resolution:=optional,
+                            org.apache.kahadb.index;version="[5.4,6)",
+                            org.apache.kahadb.journal;version="[5.4,6)",
+                            org.apache.kahadb.page;version="[5.4,6)",
+                            org.apache.kahadb.util;version="[5.4,6)",
+                            org.apache.maven.plugin;resolution:=optional,
+                            org.apache.maven.plugin.logging;resolution:=optional,
+                            org.apache.maven.project;resolution:=optional,
+                            org.apache.tools.ant;resolution:=optional,
+                            org.apache.tools.ant.taskdefs;resolution:=optional,
+                            org.apache.xbean.spring.context;resolution:=optional;version="[3.7,4)",
+                            org.apache.xbean.spring.context.impl;resolution:=optional;version="[3.7,4)",
+                            org.apache.xbean.spring.context.v2;resolution:=optional,
+                            org.apache.xpath;resolution:=optional,
+                            org.apache.xpath.objects;resolution:=optional,
+                            org.codehaus.jam;resolution:=optional,
+                            org.codehaus.jettison.mapped;resolution:=optional;version="[1.2,2)",
+                            org.osgi.framework;version="[1.4,2)",
+                            org.springframework.beans;resolution:=optional;version="[3.0,4)",
+                            org.springframework.beans.factory;resolution:=optional;version="[3.0,4)",
+                            org.springframework.beans.factory.xml;resolution:=optional;version="[3.0,4)",
+                            org.springframework.beans.propertyeditors;resolution:=optional;version="[3.0,4)",
+                            org.springframework.context;resolution:=optional;version="[3.0,4)",
+                            org.springframework.core.io;resolution:=optional;version="[3.0,4)",
+                            org.springframework.jndi;resolution:=optional;version="[3.0,4)",
+                            org.springframework.util;resolution:=optional;version="[3.0,4)",
+                            org.w3c.dom,
+                            org.w3c.dom.traversal;resolution:=optional,
+                            org.xml.sax
+                        </Import-Package>
                         <Bundle-Vendor>ApacheMQ Project</Bundle-Vendor>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Embed-Dependency>activemq-core;inline=true</Embed-Dependency>

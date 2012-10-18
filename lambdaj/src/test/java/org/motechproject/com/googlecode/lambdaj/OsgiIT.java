@@ -1,12 +1,9 @@
 package org.motechproject.com.googlecode.lambdaj;
 
-import org.eclipse.gemini.blueprint.test.platform.Platforms;
 import org.hamcrest.core.IsEqual;
 import org.motechproject.testing.osgi.BaseOsgiIT;
 
 import java.util.List;
-import java.util.jar.Attributes;
-import java.util.jar.Manifest;
 
 import static ch.lambdaj.Lambda.filter;
 import static java.util.Arrays.asList;
