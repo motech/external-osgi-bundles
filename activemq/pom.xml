@@ -3,8 +3,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.activemq</groupId>
-    <artifactId>org.motechproject.org.activemq</artifactId>
+    <groupId>org.apache.activemq</groupId>
+    <artifactId>org.motechproject.org.apache.activemq</artifactId>
     <version>5.4.2</version>
     <packaging>bundle</packaging>
     <name>ActiveMQ</name>
