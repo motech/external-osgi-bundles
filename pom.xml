@@ -28,6 +28,7 @@
         <module>smslib</module>
         <module>stax</module>
         <module>xstream</module>
+        <module>hibernate</module>
     </modules>
     <build>
         <plugins>
