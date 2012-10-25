@@ -9,9 +9,13 @@
     <packaging>bundle</packaging>
     <name>Hibernate</name>
     <description>Hibernate ORM for Jdbc</description>
-
+    <parent>
+        <groupId>org.motechproject</groupId>
+        <artifactId>external-osgi-bundles</artifactId>
+        <version>0.14-SNAPSHOT</version>
+    </parent>
     <properties>
-        <modules.root.dir>${basedir}/../..</modules.root.dir>
+        <modules.root.dir>${basedir}/..</modules.root.dir>
     </properties>
 
     <repositories>
