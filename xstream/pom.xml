@@ -137,7 +137,7 @@
                             com.thoughtworks.xstream.persistence;version=${project.version}
                         </Export-Package>
                         <Import-Package>
-                            sun.misc;resolution:=optional,sun.reflect;resolution:=optional,!(javax.xml.stream|javax.xml.datatype|javax.xml.namespace|javax.xml.parsers|javax.xml.transform|javax.xml.transform.sax|javax.xml.transform.stream|org.w3c.dom|org.xml.sax|org.xml.sax.helpers),*
+                            sun.misc;resolution:=optional,sun.reflect;resolution:=optional,*
                         </Import-Package>
                         <Bundle-Vendor>XStream</Bundle-Vendor>
                         <Bundle-DocURL>http://xstream.codehaus.org/</Bundle-DocURL>
