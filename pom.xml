@@ -29,6 +29,7 @@
         <module>stax</module>
         <module>xstream</module>
         <module>hibernate</module>
+        <module>xpp3</module>
     </modules>
     <build>
         <plugins>

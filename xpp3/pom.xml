@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>xpp3</groupId>
+    <artifactId>org.motechproject.xpp3</artifactId>
+    <version>1.1.4c</version>
+    <packaging>bundle</packaging>
+    <name>XPP3</name>
+    <description>MXP1 is a stable XmlPull parsing engine that is based on ideas from XPP and in particular XPP2 but completely revised and rewritten to take the best advantage of latest JIT JVMs such as Hotspot in JDK 1.4+.</description>
+    <parent>
+        <groupId>org.motechproject</groupId>
+        <artifactId>external-osgi-bundles</artifactId>
+        <version>0.14-SNAPSHOT</version>
+    </parent>
+    <properties>
+        <modules.root.dir>${basedir}/../..</modules.root.dir>
+    </properties>
+
+    <dependencies>
+<dependency>
+	<groupId>xpp3</groupId>
+	<artifactId>xpp3</artifactId>
+	<version>${project.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>2.3.4</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Export-Package>
+                            org.xmlpull.v1;version=${project.version},
+                            org.xmlpull.mxp1;version=${project.version}
+                        </Export-Package>
+                        <Bundle-Vendor>XPP3</Bundle-Vendor>
+                        <Bundle-DocURL>http://www.extreme.indiana.edu/xgws/xsoap/xpp/mxp1/</Bundle-DocURL>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Embed-Dependency>xpp3;inline=true</Embed-Dependency>
+                        <Embed-Transitive>false</Embed-Transitive>
+                    </instructions>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.5</version>
+                <executions>
+                    <execution>
+                        <id>copy-bundles</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${user.home}/.motech/bundles</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>target</directory>
+                                    <includes>
+                                        <include>*.jar</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
