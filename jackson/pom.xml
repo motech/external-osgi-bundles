@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>org.codehaus.jackson</groupId>
     <artifactId>org.motechproject.org.codehaus.jackson</artifactId>
     <version>1.9.7</version>
     <packaging>bundle</packaging>
     <name>Jackson</name>
     <description>Jackson is a high-performance JSON processor (parser, generator)</description>
+
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
         <version>0.14-SNAPSHOT</version>
     </parent>
+
     <properties>
         <modules.root.dir>${basedir}/../..</modules.root.dir>
     </properties>
@@ -21,15 +26,20 @@
     <dependencies>
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-mapper-asl</artifactId>
+            <artifactId>jackson-core-asl</artifactId>
             <version>${project.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-core-asl</artifactId>
+            <artifactId>jackson-mapper-asl</artifactId>
             <version>${project.version}</version>
-            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.motechproject</groupId>
+            <artifactId>org.motechproject.osgi.it</artifactId>
+            <version>1.0.2.RELEASE</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -42,42 +52,60 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
+                        <Import-Package>
+                            javax.xml.datatype,
+                            javax.xml.namespace,
+                            javax.xml.parsers,
+                            org.w3c.dom,
+                            org.xml.sax
+                        </Import-Package>
+                        <DynamicImport-Package>
+                            org.joda.time,
+                            org.joda.time.format,
+                            org.w3c.dom.ls,
+                            org.w3c.dom.bootstrap,
+                            *
+                        </DynamicImport-Package>
+                        <Private-Package>
+                            org.codehaus.jackson.map.ext
+                        </Private-Package>
                         <Export-Package>
-                            org.codehaus.jackson;version=${project.version},
-                            org.codehaus.jackson.annotate;version=${project.version},
-                            org.codehaus.jackson.format;version=${project.version},
-                            org.codehaus.jackson.impl;version=${project.version},
-                            org.codehaus.jackson.io;version=${project.version},
-                            org.codehaus.jackson.map;version=${project.version},
-                            org.codehaus.jackson.map.annotate;version=${project.version},
-                            org.codehaus.jackson.map.deser;version=${project.version},
-                            org.codehaus.jackson.map.deser.impl;version=${project.version},
-                            org.codehaus.jackson.map.deser.std;version=${project.version},
-                            org.codehaus.jackson.map.exc;version=${project.version},
-                            org.codehaus.jackson.map.ext;version=${project.version},
-                            org.codehaus.jackson.map.introspect;version=${project.version},
-                            org.codehaus.jackson.map.jsontype;version=${project.version},
-                            org.codehaus.jackson.map.jsontype.impl;version=${project.version},
-                            org.codehaus.jackson.map.module;version=${project.version},
-                            org.codehaus.jackson.map.ser;version=${project.version},
-                            org.codehaus.jackson.map.ser.impl;version=${project.version},
-                            org.codehaus.jackson.map.ser.std;version=${project.version},
-                            org.codehaus.jackson.map.type;version=${project.version},
-                            org.codehaus.jackson.map.util;version=${project.version},
-                            org.codehaus.jackson.node;version=${project.version},
-                            org.codehaus.jackson.schema;version=${project.version},
-                            org.codehaus.jackson.sym;version=${project.version},
-                            org.codehaus.jackson.type;version=${project.version},
-                            org.codehaus.jackson.util;version=${project.version}
+                            org.codehaus.jackson.format,
+                            org.codehaus.jackson,
+                            org.codehaus.jackson.io,
+                            org.codehaus.jackson.sym,
+                            org.codehaus.jackson.util,
+                            org.codehaus.jackson.annotate,
+                            org.codehaus.jackson.impl,
+                            org.codehaus.jackson,
+                            org.codehaus.jackson.type,
+                            org.codehaus.jackson.schema,
+                            org.codehaus.jackson.map.deser.impl,
+                            org.codehaus.jackson.map.exc,
+                            org.codehaus.jackson.map.annotate,
+                            org.codehaus.jackson.map.ser.impl,
+                            org.codehaus.jackson.map.ser.std,
+                            org.codehaus.jackson.map.type,
+                            org.codehaus.jackson.map.module,
+                            org.codehaus.jackson.node,
+                            org.codehaus.jackson.map,
+                            org.codehaus.jackson.map.deser,
+                            org.codehaus.jackson.map.introspect,
+                            org.codehaus.jackson.map.jsontype,
+                            org.codehaus.jackson.map.util,
+                            org.codehaus.jackson.map.deser.std,
+                            org.codehaus.jackson.map.jsontype.impl,
+                            org.codehaus.jackson.map.ser
                         </Export-Package>
                         <Bundle-Vendor>Jackson</Bundle-Vendor>
-                        <Bundle-DocURL>http://jackson.codehaus.org</Bundle-DocURL>
+                        <Bundle-DocURL>http://jackson.codehaus.org/</Bundle-DocURL>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Embed-Dependency>(jackson-core-asl|jackson-mapper-asl);inline=true</Embed-Dependency>
-                        <Embed-Transitive>false</Embed-Transitive>
+                        <Embed-Transitive>true</Embed-Transitive>
                     </instructions>
                 </configuration>
             </plugin>
+
             <plugin>
                 <artifactId>maven-resources-plugin</artifactId>
                 <version>2.5</version>

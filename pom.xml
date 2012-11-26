@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>org.motechproject</groupId>
     <artifactId>external-osgi-bundles</artifactId>
     <version>0.14-SNAPSHOT</version>
@@ -12,9 +15,11 @@
         MOTECH is a software system from Grameen Foundation that harnesses the ubiquity
         of mobile phones to deliver and receive information from patient and caregivers.
     </description>
-	<properties>
+
+    <properties>
 		<jdk.version>1.7</jdk.version>
 	</properties>
+
     <modules>
         <module>activemq</module>
         <module>ektorp</module>
@@ -30,7 +35,10 @@
         <module>xstream</module>
         <module>hibernate</module>
         <module>xpp3</module>
+        <module>hibernate-validator</module>
+        <module>mvel</module>
     </modules>
+
     <build>
         <plugins>
             <plugin>
@@ -60,6 +68,7 @@
             </plugin>
 			</plugins>
     </build>
+
     <repositories>
         <repository>
             <id>1motech-repo</id>
@@ -82,6 +91,7 @@
             <url>http://repository.springsource.com/maven/bundles/external</url>
         </repository>
     </repositories>
+
     <distributionManagement>
         <repository>
             <id>motech.nexus</id>
@@ -96,4 +106,13 @@
             <uniqueVersion>false</uniqueVersion>
         </snapshotRepository>
     </distributionManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.9</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 </project>
