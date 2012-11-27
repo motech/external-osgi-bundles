@@ -107,6 +107,7 @@
                             org.apache.xpath.objects;resolution:=optional,
                             org.codehaus.jam;resolution:=optional,
                             org.codehaus.jettison.mapped;resolution:=optional;version="[1.2,2)",
+                            org.joda.time.chrono,
                             org.osgi.framework;version="[1.4,2)",
                             org.springframework.beans;resolution:=optional;version="[3.0,4)",
                             org.springframework.beans.factory;resolution:=optional;version="[3.0,4)",
