@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.apache.activemq</groupId>
     <artifactId>org.motechproject.org.apache.activemq</artifactId>
-    <version>5.4.2</version>
+    <version>5.4.2-r001</version>
     <packaging>bundle</packaging>
     <name>ActiveMQ</name>
     <description>ActiveMQ library</description>
