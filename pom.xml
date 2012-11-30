@@ -7,7 +7,7 @@
 
     <groupId>org.motechproject</groupId>
     <artifactId>external-osgi-bundles</artifactId>
-    <version>0.14-SNAPSHOT</version>
+    <version>0.16-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>MOTECH-external-bundles</name>
 
@@ -37,6 +37,7 @@
         <module>xpp3</module>
         <module>hibernate-validator</module>
         <module>mvel</module>
+        <module>c3p0-fragment-bundle</module>
     </modules>
 
     <build>
