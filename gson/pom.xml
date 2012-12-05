@@ -5,24 +5,25 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.google.code.gson</groupId>
     <artifactId>org.motechproject.com.google.code.gson</artifactId>
-    <version>1.7.1</version>
+    <version>1.7.1-r001</version>
     <packaging>bundle</packaging>
     <name>Gson</name>
     <description>Google Gson library</description>
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
-        <version>0.14-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
     <properties>
         <modules.root.dir>${basedir}/../..</modules.root.dir>
+        <gson.version>1.7.1</gson.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>${project.version}</version>
+            <version>${gson.version}</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

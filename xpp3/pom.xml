@@ -5,24 +5,27 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>xpp3</groupId>
     <artifactId>org.motechproject.xpp3</artifactId>
-    <version>1.1.4c</version>
+    <version>${xpp3.version}-${release.tag}</version>
     <packaging>bundle</packaging>
     <name>XPP3</name>
-    <description>MXP1 is a stable XmlPull parsing engine that is based on ideas from XPP and in particular XPP2 but completely revised and rewritten to take the best advantage of latest JIT JVMs such as Hotspot in JDK 1.4+.</description>
+    <description>MXP1 is a stable XmlPull parsing engine that is based on ideas from XPP and in particular XPP2 but
+        completely revised and rewritten to take the best advantage of latest JIT JVMs such as Hotspot in JDK 1.4+.
+    </description>
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
-        <version>0.14-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
     <properties>
         <modules.root.dir>${basedir}/../..</modules.root.dir>
+        <xpp3.version>1.1.4c</xpp3.version>
     </properties>
 
     <dependencies>
-<dependency>
-	<groupId>xpp3</groupId>
-	<artifactId>xpp3</artifactId>
-	<version>${project.version}</version>
+        <dependency>
+            <groupId>xpp3</groupId>
+            <artifactId>xpp3</artifactId>
+            <version>${xpp3.version}</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

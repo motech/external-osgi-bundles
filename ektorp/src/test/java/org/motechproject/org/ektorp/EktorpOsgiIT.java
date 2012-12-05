@@ -11,8 +11,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
-public class EktorpOsgiTest extends BaseOsgiIT {
-    private Logger logger = Logger.getLogger(EktorpOsgiTest.class.getName());
+public class EktorpOsgiIT extends BaseOsgiIT {
+    private Logger logger = Logger.getLogger(EktorpOsgiIT.class.getName());
 
     public void testEktorpIsAvailable() {
         final StdCouchDbConnector dbConnector = new StdCouchDbConnector("ektorpitdb", new StdCouchDbInstance( new StdHttpClient.Builder().caching(false).build()));
@@ -25,10 +25,5 @@ public class EktorpOsgiTest extends BaseOsgiIT {
         final Map doc = dbConnector.get(Map.class, "docid");
         assertEquals(12, doc.get("value"));
         dbConnector.delete("docid", doc.get("_rev").toString());
-    }
-
-    @Override
-    protected String getPlatformName() {
-        return Platforms.FELIX;
     }
 }

@@ -8,7 +8,7 @@
 
     <groupId>org.hibernate</groupId>
     <artifactId>org.motechproject.org.hibernate</artifactId>
-    <version>3.6.0</version>
+    <version>${hibernate.version}-${release.tag}</version>
     <packaging>bundle</packaging>
     <name>Hibernate</name>
     <description>Hibernate ORM for Jdbc</description>
@@ -16,11 +16,12 @@
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
-        <version>0.14-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
 
     <properties>
         <modules.root.dir>${basedir}/..</modules.root.dir>
+        <hibernate.version>3.6.0.Final</hibernate.version>
     </properties>
 
     <repositories>
@@ -40,13 +41,13 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>3.6.0.Final</version>
+            <version>${hibernate.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
-            <version>3.6.0.Final</version>
+            <version>${hibernate.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -65,13 +66,6 @@
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
             <version>2.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.motechproject</groupId>
-            <artifactId>org.motechproject.osgi.it</artifactId>
-            <version>1.0.2.RELEASE-r001</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 

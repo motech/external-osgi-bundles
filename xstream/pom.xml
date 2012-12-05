@@ -5,23 +5,24 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.thoughtworks.xstream</groupId>
     <artifactId>org.motechproject.com.thoughtworks.xstream</artifactId>
-    <version>1.4.2</version>
+    <version>${xstream.version}-${release.tag}</version>
     <packaging>bundle</packaging>
     <name>XStream Core</name>
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
-        <version>0.14-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
     <properties>
         <modules.root.dir>${basedir}/../..</modules.root.dir>
+        <xstream.version>1.4.2</xstream.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.thoughtworks.xstream</groupId>
             <artifactId>xstream</artifactId>
-            <version>${project.version}</version>
+            <version>${xstream.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

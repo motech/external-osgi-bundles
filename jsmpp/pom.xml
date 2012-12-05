@@ -5,24 +5,25 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.googlecode.jsmpp</groupId>
     <artifactId>org.motechproject.com.googlecode.jsmpp</artifactId>
-    <version>2.1.0</version>
+    <version>${jsmpp.version}-${release.tag}</version>
     <packaging>bundle</packaging>
     <name>JSMPP</name>
     <description>The Java implementation of SMPP protocol (currently supports SMPP v 3.4)</description>
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
-        <version>0.14-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
     <properties>
         <modules.root.dir>${basedir}/../..</modules.root.dir>
+        <jsmpp.version>2.1.0</jsmpp.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.googlecode.jsmpp</groupId>
             <artifactId>jsmpp-for-smslib</artifactId>
-            <version>${project.version}</version>
+            <version>${jsmpp.version}</version>
             <scope>provided</scope>
             <exclusions>
                 <exclusion>

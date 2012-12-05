@@ -5,24 +5,25 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.quartz-scheduler</groupId>
     <artifactId>org.motechproject.org.quartz-scheduler</artifactId>
-    <version>2.1.5-r001</version>
+    <version>${quartz.version}-${release.tag}</version>
     <packaging>bundle</packaging>
     <name>Quartz Scheduler</name>
     <description>Quartz Enterprise Job Scheduler</description>
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
-        <version>0.14-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
     <properties>
         <modules.root.dir>${basedir}/../..</modules.root.dir>
+        <quartz.version>2.1.5</quartz.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.quartz-scheduler</groupId>
             <artifactId>quartz</artifactId>
-            <version>2.1.5</version>
+            <version>${quartz.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -34,12 +35,6 @@
             <groupId>org.apache.log4j</groupId>
             <artifactId>com.springsource.org.apache.log4j</artifactId>
             <version>1.2.16</version>
-        </dependency>
-        <dependency>
-            <groupId>org.motechproject</groupId>
-            <artifactId>org.motechproject.osgi.it</artifactId>
-            <version>1.0.2.RELEASE-r001</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -74,7 +69,7 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
-                            org.quartz.*;version=2.1.5
+                            org.quartz.*;version=${quartz.version}
                         </Export-Package>
                         <Import-Package>
                             javax.ejb;resolution:=optional,

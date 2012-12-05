@@ -8,7 +8,7 @@
 
     <groupId>org.codehaus.jackson</groupId>
     <artifactId>org.motechproject.org.codehaus.jackson</artifactId>
-    <version>1.9.7</version>
+    <version>${jackson.version}-${release.tag}</version>
     <packaging>bundle</packaging>
     <name>Jackson</name>
     <description>Jackson is a high-performance JSON processor (parser, generator)</description>
@@ -16,30 +16,24 @@
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
-        <version>0.14-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
 
     <properties>
         <modules.root.dir>${basedir}/../..</modules.root.dir>
+        <jackson.version>1.9.7</jackson.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-core-asl</artifactId>
-            <version>${project.version}</version>
+            <version>${jackson.version}</version>
         </dependency>
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-mapper-asl</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.motechproject</groupId>
-            <artifactId>org.motechproject.osgi.it</artifactId>
-            <version>1.0.2.RELEASE-r001</version>
-            <scope>test</scope>
+            <version>${jackson.version}</version>
         </dependency>
     </dependencies>
 

@@ -9,9 +9,9 @@ import java.io.IOException;
 import java.util.jar.Manifest;
 import java.util.logging.Logger;
 
-public class JacksonOsgiTest extends BaseOsgiIT {
+public class JacksonOsgiIT extends BaseOsgiIT {
 
-    private Logger logger = Logger.getLogger(JacksonOsgiTest.class.getName());
+    private Logger logger = Logger.getLogger(JacksonOsgiIT.class.getName());
 
     public void testJacksonDeserialization() throws IOException {
         Entity entity = new Entity("foo");
@@ -29,11 +29,6 @@ public class JacksonOsgiTest extends BaseOsgiIT {
         assertEquals(MyEntity.class, deserializedEntity.getClass());
         assertEquals(entity.getName(), deserializedEntity.getName());
         Thread.currentThread().setContextClassLoader(contextClassLoader);
-    }
-
-    @Override
-    protected String getPlatformName() {
-        return Platforms.FELIX;
     }
 
     @Override

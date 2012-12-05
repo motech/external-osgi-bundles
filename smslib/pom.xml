@@ -5,23 +5,26 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.smslib</groupId>
     <artifactId>org.motechproject.org.smslib</artifactId>
-    <version>3.5.1</version>
+    <version>${smslib.version}-${release.tag}</version>
     <packaging>bundle</packaging>
     <name>SMSLib</name>
+
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
-        <version>0.14-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
+
     <properties>
         <modules.root.dir>${basedir}/../..</modules.root.dir>
+        <smslib.version>3.5.1</smslib.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.smslib</groupId>
             <artifactId>smslib-patched</artifactId>
-            <version>${project.version}</version>
+            <version>${smslib.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

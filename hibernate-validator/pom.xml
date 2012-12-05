@@ -8,7 +8,7 @@
 
     <groupId>org.hibernate</groupId>
     <artifactId>org.motechproject.org.hibernate.validator</artifactId>
-    <version>4.1.0.Final</version>
+    <version>${hibernate.validator.version}-${release.tag}</version>
     <name>Hibernate Validator</name>
     <description>Hibernate JSR303 Validator</description>
     <packaging>bundle</packaging>
@@ -16,11 +16,12 @@
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
-        <version>0.14-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
 
     <properties>
         <modules.root.dir>${basedir}/..</modules.root.dir>
+        <hibernate.validator.version>4.1.0.Final</hibernate.validator.version>
     </properties>
 
     <repositories>
@@ -40,7 +41,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
-            <version>4.1.0.Final</version>
+            <version>${hibernate.validator.version}</version>
             <exclusions>
                 <exclusion>
                     <artifactId>slf4j-api</artifactId>
@@ -60,13 +61,6 @@
             <groupId>javax.validation</groupId>
             <artifactId>com.springsource.javax.validation</artifactId>
             <version>1.0.0.GA</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.motechproject</groupId>
-            <artifactId>org.motechproject.osgi.it</artifactId>
-            <version>1.0.2.RELEASE-r001</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 

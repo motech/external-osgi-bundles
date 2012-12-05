@@ -5,24 +5,25 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.googlecode.lambdaj</groupId>
     <artifactId>org.motechproject.com.googlecode.lambdaj</artifactId>
-    <version>2.3.3</version>
+    <version>${lambdaj.version}-${release.tag}</version>
     <packaging>bundle</packaging>
     <name>lambdaj</name>
     <description>The pseudo-functional collection manipulation library</description>
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
-        <version>0.14-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
     <properties>
         <modules.root.dir>${basedir}/..</modules.root.dir>
+        <lambdaj.version>2.3.3</lambdaj.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.googlecode.lambdaj</groupId>
             <artifactId>lambdaj</artifactId>
-            <version>2.3.3</version>
+            <version>${lambdaj.version}</version>
             <exclusions>
                 <exclusion>
                     <artifactId>hamcrest-all</artifactId>
@@ -57,12 +58,6 @@
             <groupId>net.sourceforge.cglib</groupId>
             <artifactId>com.springsource.net.sf.cglib</artifactId>
             <version>2.2.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.motechproject</groupId>
-            <artifactId>org.motechproject.osgi.it</artifactId>
-            <version>1.0.2.RELEASE-r001</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 
