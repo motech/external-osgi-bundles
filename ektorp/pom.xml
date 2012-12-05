@@ -124,12 +124,6 @@
             <version>4.9.0</version>
         </dependency>
         <dependency>
-            <groupId>org.motechproject</groupId>
-            <artifactId>org.motechproject.osgi.it</artifactId>
-            <version>1.0.2.RELEASE-r001</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <artifactId>org.springframework.test</artifactId>
             <groupId>org.springframework</groupId>
             <version>3.1.0.RELEASE</version>
