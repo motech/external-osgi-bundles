@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.quartz-scheduler</groupId>
     <artifactId>org.motechproject.org.quartz-scheduler</artifactId>
-    <version>2.1.5</version>
+    <version>2.1.5-r001</version>
     <packaging>bundle</packaging>
     <name>Quartz Scheduler</name>
     <description>Quartz Enterprise Job Scheduler</description>
@@ -38,7 +38,7 @@
         <dependency>
             <groupId>org.motechproject</groupId>
             <artifactId>org.motechproject.osgi.it</artifactId>
-            <version>1.0.2.RELEASE</version>
+            <version>1.0.2.RELEASE-r001</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

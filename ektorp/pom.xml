@@ -125,7 +125,7 @@
         <dependency>
             <groupId>org.motechproject</groupId>
             <artifactId>org.motechproject.osgi.it</artifactId>
-            <version>1.0.2.RELEASE</version>
+            <version>1.0.2.RELEASE-r001</version>
             <scope>test</scope>
         </dependency>
         <dependency>
