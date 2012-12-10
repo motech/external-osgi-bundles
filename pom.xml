@@ -39,6 +39,7 @@
         <module>hibernate-validator</module>
         <module>mvel</module>
         <module>c3p0-fragment-bundle</module>
+        <module>json</module>
     </modules>
 
     <build>
