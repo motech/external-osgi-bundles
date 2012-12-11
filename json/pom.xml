@@ -11,7 +11,7 @@
 
     <groupId>org.json</groupId>
     <artifactId>org.motechproject.org.json</artifactId>
-    <version>20080701</version>
+    <version>${json.version}-${release.tag}</version>
     <packaging>bundle</packaging>
 
     <parent>
@@ -22,6 +22,7 @@
 
     <properties>
         <modules.root.dir>${basedir}/..</modules.root.dir>
+        <json.version>20080701</json.version>
     </properties>
 
     <repositories>
@@ -41,7 +42,7 @@
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
-            <version>20080701</version>
+            <version>${json.version}</version>
         </dependency>
 
         <dependency>
