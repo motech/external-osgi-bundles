@@ -1,12 +1,10 @@
 package org.motechproject.org.json;
 
-import org.eclipse.gemini.blueprint.test.platform.Platforms;
 import org.json.JSONObject;
-import org.motechproject.testing.osgi.BaseOsgiIT;
 
 import java.util.logging.Logger;
 
-public class JsonOsgiTest extends BaseOsgiIT {
+public class JsonOsgiTest { // TODO!
 
     private Logger logger = Logger.getLogger(JsonOsgiTest.class.getName());
 
@@ -14,8 +12,8 @@ public class JsonOsgiTest extends BaseOsgiIT {
         new JSONObject();
     }
 
-    @Override
-    protected String getPlatformName() {
-        return Platforms.FELIX;
-    }
+//    @Override
+//    protected String getPlatformName() {
+//        return Platforms.FELIX;
+//    }
 }
