@@ -7,8 +7,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.hibernate</groupId>
-    <artifactId>org.motechproject.org.hibernate</artifactId>
-    <version>${hibernate.version}-${release.tag}</version>
+    <artifactId>com.springsource.org.hibernate</artifactId>
+    <version>${hibernate.version}-motech-${release.tag}</version>
     <packaging>bundle</packaging>
     <name>Hibernate</name>
     <description>Hibernate ORM for Jdbc</description>
