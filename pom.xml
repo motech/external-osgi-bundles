@@ -17,9 +17,9 @@
     </description>
 
     <properties>
-		<jdk.version>1.7</jdk.version>
+        <jdk.version>1.7</jdk.version>
         <release.tag>r002</release.tag>
-	</properties>
+    </properties>
 
     <modules>
         <module>activemq</module>
@@ -40,6 +40,9 @@
         <module>mvel</module>
         <module>c3p0-fragment-bundle</module>
         <module>json</module>
+        <module>ektorplucene</module>
+        <module>jettison</module>
+        <module>dom4j</module>
     </modules>
 
     <build>
@@ -60,7 +63,7 @@
                     </execution>
                 </executions>
             </plugin>
-			<plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.5.1</version>
@@ -69,7 +72,7 @@
                     <target>${jdk.version}</target>
                 </configuration>
             </plugin>
-			</plugins>
+        </plugins>
     </build>
 
     <repositories>
@@ -120,7 +123,7 @@
         <dependency>
             <groupId>org.motechproject</groupId>
             <artifactId>org.motechproject.osgi.it</artifactId>
-            <version>1.0.2.RELEASE-r001</version>
+            <version>1.0.2.RELEASE-r004</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

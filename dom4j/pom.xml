@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>external-osgi-bundles</artifactId>
+        <groupId>org.motechproject</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <groupId>org.dom4j</groupId>
+    <artifactId>org.motechproject.org.dom4j</artifactId>
+    <version>${dom4j.version}-${release.tag}</version>
+    <name>dom4j</name>
+    <description>Dom4j</description>
+    <packaging>bundle</packaging>
+    <properties>
+        <modules.root.dir>${basedir}/../..</modules.root.dir>
+        <dom4j.version>1.6.1</dom4j.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>${dom4j.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>2.3.4</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Export-Package>
+                            org.dom4j.*;version="${project.version}"
+                        </Export-Package>
+                        <Import-Package>
+                            org.gjt.xpp;resolution:=optional,
+                            org.jaxen.*;resolution:=optional,
+                            org.jaxen.dom4j;resolution:=optional,
+                            org.relaxng.datatype;resolution:=optional,
+                            javax.xml.bind;resolution:=optional,
+                            com.sun.msv.*;resolution:=optional,
+                            org.xmlpull.v1;resolution:=optional,
+                            *
+                        </Import-Package>
+                        <Bundle-Vendor>Dom4j</Bundle-Vendor>
+                        <Bundle-DocURL>http://dom4j.sourceforge.net/</Bundle-DocURL>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Embed-Dependency>dom4j;inline=true</Embed-Dependency>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
