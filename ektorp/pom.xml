@@ -66,11 +66,13 @@
                     <groupId>org.codehaus.jackson</groupId>
                 </exclusion>-->
             </exclusions>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.ektorp</groupId>
             <artifactId>org.ektorp.spring</artifactId>
             <version>${ektorp.version}</version>
+            <scope>provided</scope>
         </dependency>
         <!--<dependency>
             <groupId>org.codehaus.jackson</groupId>
@@ -121,7 +123,7 @@
         <dependency>
             <groupId>org.junit</groupId>
             <artifactId>org.motechproject.org.junit</artifactId>
-            <version>4.9.0</version>
+            <version>4.9-${release.tag}</version>
         </dependency>
         <dependency>
             <artifactId>org.springframework.test</artifactId>

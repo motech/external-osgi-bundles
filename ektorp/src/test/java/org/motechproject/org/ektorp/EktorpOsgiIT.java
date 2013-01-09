@@ -1,6 +1,5 @@
 package org.motechproject.org.ektorp;
 
-import org.eclipse.gemini.blueprint.test.platform.Platforms;
 import org.ektorp.DbInfo;
 import org.ektorp.http.StdHttpClient;
 import org.ektorp.impl.StdCouchDbConnector;

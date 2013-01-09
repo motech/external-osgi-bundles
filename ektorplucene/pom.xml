@@ -29,12 +29,12 @@
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>org.motechproject.org.codehaus.jackson</artifactId>
-            <version>1.9.7</version>
+            <version>1.9.7-${release.tag}</version>
         </dependency>
         <dependency>
             <groupId>org.ektorp</groupId>
             <artifactId>org.motechproject.org.ektorp</artifactId>
-            <version>RELEASE</version>
+            <version>1.3.0-${release.tag}</version>
         </dependency>
     </dependencies>
     <build>

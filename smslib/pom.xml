@@ -35,7 +35,7 @@
         <dependency>
             <groupId>com.googlecode.jsmpp</groupId>
             <artifactId>org.motechproject.com.googlecode.jsmpp</artifactId>
-            <version>2.1.0-r002</version>
+            <version>2.1.0-${release.tag}</version>
         </dependency>
     </dependencies>
 
@@ -80,30 +80,6 @@
                         <Embed-Transitive>false</Embed-Transitive>
                     </instructions>
                 </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>2.5</version>
-                <executions>
-                    <execution>
-                        <id>copy-bundles</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${user.home}/.motech/bundles</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>target</directory>
-                                    <includes>
-                                        <include>*.jar</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
