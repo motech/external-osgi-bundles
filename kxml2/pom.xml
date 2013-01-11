@@ -12,7 +12,7 @@
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
-        <version>1.0.0-r007</version>
+        <version>1.0.0-r008</version>
     </parent>
     <properties>
         <modules.root.dir>${basedir}/../..</modules.root.dir>

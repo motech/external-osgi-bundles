@@ -6,7 +6,7 @@
     <parent>
         <artifactId>external-osgi-bundles</artifactId>
         <groupId>org.motechproject</groupId>
-        <version>1.0.0-r007</version>
+        <version>1.0.0-r008</version>
     </parent>
     <groupId>org.dom4j</groupId>
     <artifactId>org.motechproject.org.dom4j</artifactId>
