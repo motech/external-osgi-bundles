@@ -75,9 +75,9 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
-                            org.hibernate.validator,
-                            org.hibernate.validator.engine,
-                            org.motechproject.org.hibernate.validator
+                            org.hibernate.validator;version=${project.version},
+                            org.hibernate.validator.engine;version=${project.version},
+                            org.motechproject.org.hibernate.validator;version=${project.version}
                         </Export-Package>
                         <Import-Package>
                             !com.googlecode.jtype,
