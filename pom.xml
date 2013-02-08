@@ -43,6 +43,7 @@
         <module>ektorplucene</module>
         <module>jettison</module>
         <module>dom4j</module>
+        <module>aether-api</module>
     </modules>
 
     <build>
