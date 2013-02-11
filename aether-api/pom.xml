@@ -144,7 +144,7 @@
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>com.springsource.org.apache.httpcomponents.httpclient</artifactId>
-            <version>4.2.1</version>
+            <version>4.1.1</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.httpcomponents</groupId>
@@ -246,7 +246,7 @@
                             org.testng.annotations.*;resolution:=optional,
                             com.google.common.base;resolution:=optional,
                             com.google.common.*;resolution:=optional,
-			    org.apache.http,
+                            org.apache.http;version="[4,5)",
                             *
                         </Import-Package>
                         <Private-Package>
