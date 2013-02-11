@@ -6,7 +6,7 @@
 
     <groupId>org.sonatype.aether</groupId>
     <artifactId>org.motechproject.aether-api</artifactId>
-    <version>1.13.1-r009</version>
+    <version>${aether.version}-${release.tag}</version>
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
@@ -246,6 +246,7 @@
                             org.testng.annotations.*;resolution:=optional,
                             com.google.common.base;resolution:=optional,
                             com.google.common.*;resolution:=optional,
+			    org.apache.http,
                             *
                         </Import-Package>
                         <Private-Package>
