@@ -1,6 +1,4 @@
-package org.motechproject.org.hibernate.validator;
-
-import org.hibernate.validator.HibernateValidator;
+package org.hibernate.validator;
 
 import javax.validation.Validation;
 import javax.validation.ValidatorFactory;
