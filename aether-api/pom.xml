@@ -219,6 +219,7 @@
                         <Import-Package>
                             javax.net.ssl;resolution:=optional,
                             javax.*;resolution:=optional,
+                            sun.misc;resolution:=optional,
                             android.*;resolution:=optional,
                             com.jamonapi.*;resolution:=optional,
                             com.sun.net.httpserver.*;resolution:=optional,
@@ -244,7 +245,6 @@
                             org.jsoup.*;resolution:=optional,
                             org.junit.*;resolution:=optional,
                             org.testng.annotations.*;resolution:=optional,
-                            com.google.common.base;resolution:=optional,
                             com.google.common.*;resolution:=optional,
                             org.apache.http;version="[4,5)",
                             *
