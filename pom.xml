@@ -44,6 +44,7 @@
         <module>jettison</module>
         <module>dom4j</module>
         <module>aether-api</module>
+        <module>xforms</module>
     </modules>
 
     <build>
