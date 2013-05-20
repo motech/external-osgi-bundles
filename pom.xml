@@ -45,6 +45,7 @@
         <module>dom4j</module>
         <module>aether-api</module>
         <module>xforms</module>
+        <module>postgresql</module>
     </modules>
 
     <build>
