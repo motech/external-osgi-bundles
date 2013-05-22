@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <artifactId>external-osgi-bundles</artifactId>
-        <groupId>org.motechproject</groupId>
-        <version>1.0.0-r010</version>
-    </parent>
+
     <groupId>org.dom4j</groupId>
     <artifactId>org.motechproject.org.dom4j</artifactId>
     <version>${dom4j.version}-${release.tag}</version>
+    <packaging>bundle</packaging>
+
+    <parent>
+        <artifactId>external-osgi-bundles</artifactId>
+        <groupId>org.motechproject</groupId>
+        <version>1.0.0-r011</version>
+    </parent>
+
     <name>dom4j</name>
     <description>Dom4j</description>
-    <packaging>bundle</packaging>
+
     <properties>
         <modules.root.dir>${basedir}/../..</modules.root.dir>
         <dom4j.version>1.6.1</dom4j.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>dom4j</groupId>
@@ -26,8 +33,38 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
+
+            <plugin>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>unpack-sources</id>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <phase>package</phase>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/sources</outputDirectory>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>dom4j</groupId>
+                                    <artifactId>dom4j</artifactId>
+                                    <version>${dom4j.version}</version>
+                                    <classifier>sources</classifier>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
@@ -55,6 +92,7 @@
                     </instructions>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 

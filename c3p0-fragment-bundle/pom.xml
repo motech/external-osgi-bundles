@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
-        <version>1.0.0-r010</version>
+        <version>1.0.0-r011</version>
     </parent>
 
     <groupId>org.motechproject</groupId>
     <artifactId>motech-c3p0-fragment-bundle</artifactId>
     <version>${c3p0.version}-${release.tag}</version>
-    <name>Motech c3p0 Fragment Bundle</name>
 
-    <description>Fragment bundle used to import mysql driver class into the c3p0 bundle classloader (used by activemq)
-    </description>
+    <name>Motech c3p0 Fragment Bundle</name>
+    <description>Fragment bundle used to import mysql driver class into the c3p0 bundle classloader (used by activemq)</description>
+
     <properties>
         <c3p0.version>0.16</c3p0.version>
     </properties>
@@ -33,6 +35,7 @@
                     </archive>
                 </configuration>
             </plugin>
+
             <plugin>
                 <artifactId>maven-resources-plugin</artifactId>
                 <version>2.5</version>

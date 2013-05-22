@@ -10,13 +10,14 @@
     <artifactId>com.springsource.org.hibernate</artifactId>
     <version>${hibernate.version}-${release.tag}</version>
     <packaging>bundle</packaging>
+
     <name>Hibernate</name>
     <description>Hibernate ORM for Jdbc</description>
 
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
-        <version>1.0.0-r010</version>
+        <version>1.0.0-r011</version>
     </parent>
 
     <properties>
@@ -71,6 +72,47 @@
 
     <build>
         <plugins>
+
+            <plugin>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>unpack-sources</id>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <phase>package</phase>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/sources</outputDirectory>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>org.hibernate</groupId>
+                                    <artifactId>hibernate-core</artifactId>
+                                    <version>${hibernate.version}</version>
+                                    <classifier>sources</classifier>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.hibernate</groupId>
+                                    <artifactId>hibernate-entitymanager</artifactId>
+                                    <version>${hibernate.version}</version>
+                                    <classifier>sources</classifier>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.hibernate</groupId>
+                                    <artifactId>hibernate-annotations</artifactId>
+                                    <version>3.5.5-Final</version>
+                                    <classifier>sources</classifier>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
@@ -97,6 +139,7 @@
                     </instructions>
                 </configuration>
             </plugin>
+
             <plugin>
                 <artifactId>maven-resources-plugin</artifactId>
                 <version>2.5</version>
@@ -121,6 +164,7 @@
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
 

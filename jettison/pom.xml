@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>external-osgi-bundles</artifactId>
-        <groupId>org.motechproject</groupId>
-        <version>1.0.0-r010</version>
-    </parent>
+
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>org.codehaus.jettison</groupId>
     <artifactId>org.motechproject.org.codehaus.jettison</artifactId>
     <version>${jettison.version}-${release.tag}</version>
+    <packaging>bundle</packaging>
+
     <name>jettison</name>
     <description>Ektorp Lucene support</description>
-    <packaging>bundle</packaging>
+
+    <parent>
+        <artifactId>external-osgi-bundles</artifactId>
+        <groupId>org.motechproject</groupId>
+        <version>1.0.0-r011</version>
+    </parent>
+
     <properties>
         <modules.root.dir>${basedir}/../..</modules.root.dir>
         <jettison.version>1.3.1</jettison.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.codehaus.jettison</groupId>
@@ -26,8 +33,38 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
+
+            <plugin>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>unpack-sources</id>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <phase>package</phase>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/sources</outputDirectory>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>org.codehaus.jettison</groupId>
+                                    <artifactId>jettison</artifactId>
+                                    <version>1.3.1</version>
+                                    <classifier>sources</classifier>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
@@ -45,6 +82,7 @@
                     </instructions>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 </project>
