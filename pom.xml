@@ -46,6 +46,7 @@
         <module>aether-api</module>
         <module>xforms</module>
         <module>postgresql</module>
+        <module>wiser</module>
     </modules>
 
     <build>
