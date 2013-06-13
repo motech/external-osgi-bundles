@@ -14,7 +14,7 @@
     <parent>
         <artifactId>external-osgi-bundles</artifactId>
         <groupId>org.motechproject</groupId>
-        <version>1.0.0-r012</version>
+        <version>1.0.0-r013</version>
     </parent>
 
     <name>dom4j</name>

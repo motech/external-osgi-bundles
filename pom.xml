@@ -7,7 +7,7 @@
 
     <groupId>org.motechproject</groupId>
     <artifactId>external-osgi-bundles</artifactId>
-    <version>1.0.0-r012</version> <!-- do not use parameter in version as maven fails to resolve it -->
+    <version>1.0.0-r013</version> <!-- do not use parameter in version as maven fails to resolve it -->
     <packaging>pom</packaging>
     <name>MOTECH-external-bundles</name>
 
@@ -18,7 +18,7 @@
 
     <properties>
         <jdk.version>1.7</jdk.version>
-        <release.tag>r012</release.tag>
+        <release.tag>r013</release.tag>
     </properties>
 
     <modules>
@@ -31,6 +31,7 @@
         <module>kxml2</module>
         <module>lambdaj</module>
         <module>quartz</module>
+        <module>quartz-couchdb-store</module>
         <module>smslib</module>
         <module>stax</module>
         <module>xstream</module>
