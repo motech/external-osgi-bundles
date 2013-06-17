@@ -16,12 +16,12 @@
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
-        <version>1.0.0-r015</version>
+        <version>1.0.0-r016</version>
     </parent>
 
     <properties>
         <modules.root.dir>${basedir}/../..</modules.root.dir>
-        <quartz.couchdb.version>0.9.3</quartz.couchdb.version>
+        <quartz.couchdb.version>0.9.4</quartz.couchdb.version>
     </properties>
 
     <dependencies>

@@ -19,7 +19,7 @@
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
-        <version>1.0.0-r015</version>
+        <version>1.0.0-r016</version>
     </parent>
 
     <properties>
