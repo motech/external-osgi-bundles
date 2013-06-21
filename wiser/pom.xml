@@ -6,19 +6,20 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.subethamail</groupId>
-    <artifactId>org.motechproject.org.subethamail</artifactId>
-    <version>3.1.7-r016</version>
-    <packaging>bundle</packaging>
-
-    <name>Subethamail</name>
-    <description>Subetha library</description>
 
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
-        <version>1.0.0-r016</version>
+        <version>1.0.0-r017</version>
     </parent>
+
+    <groupId>org.subethamail</groupId>
+    <artifactId>org.motechproject.org.subethamail</artifactId>
+    <version>${subetha.version}-${release.tag}</version>
+    <packaging>bundle</packaging>
+
+    <name>Subethamail</name>
+    <description>Subetha library</description>
 
     <properties>
         <modules.root.dir>${basedir}/../..</modules.root.dir>
