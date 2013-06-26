@@ -48,6 +48,7 @@
         <module>xforms</module>
         <module>postgresql</module>
         <module>wiser</module>
+        <module>hapi</module>
     </modules>
 
     <build>
