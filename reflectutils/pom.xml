@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.azeckoski</groupId>
     <artifactId>org.motechproject.org.azeckoski.reflectutils</artifactId>
-    <version>0.9.14</version>
+    <version>${reflectionutils.version}-${release.tag}</version>
     <packaging>bundle</packaging>
     <name>Reflection Utilities</name>
     <description>
@@ -20,38 +20,22 @@
         Hibernate is not required if you are not using it in your project.
     </description>
 
+    <parent>
+        <groupId>org.motechproject</groupId>
+        <artifactId>external-osgi-bundles</artifactId>
+        <version>1.0.0-r017</version>
+    </parent>
+
     <properties>
-        <modules.root.dir>${basedir}/../..</modules.root.dir>
+        <reflectionutils.version>0.9.14</reflectionutils.version>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>1motech-repo</id>
-            <name>1MOTECH Maven Repository</name>
-            <url>http://repo.springsource.org/libs-milestone/</url>
-        </repository>
-        <repository>
-            <id>motech-repo</id>
-            <name>MOTECH Maven Repository</name>
-            <url>http://nexus.motechproject.org/content/repositories/public</url>
-        </repository>
-        <repository>
-            <id>com.springsource.repository.bundles.release</id>
-            <name>SpringSource Enterprise Bundle Repository - SpringSource Bundle Releases</name>
-            <url>http://repository.springsource.com/maven/bundles/release</url>
-        </repository>
-        <repository>
-            <id>com.springsource.repository.bundles.external</id>
-            <name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
-            <url>http://repository.springsource.com/maven/bundles/external</url>
-        </repository>
-    </repositories>
 
     <dependencies>
         <dependency>
             <groupId>org.azeckoski</groupId>
             <artifactId>reflectutils</artifactId>
-            <version>${project.version}</version>
+            <version>${reflectionutils.version}</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -66,15 +50,15 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
-                            org.azeckoski.reflectutils;version=${project.version},
-                            org.azeckoski.reflectutils.annotations;version=${project.version},
-                            org.azeckoski.reflectutils.beanutils;version=${project.version},
-                            org.azeckoski.reflectutils.converters;version=${project.version},
-                            org.azeckoski.reflectutils.converters.api;version=${project.version},
-                            org.azeckoski.reflectutils.exceptions;version=${project.version},
-                            org.azeckoski.reflectutils.map;version=${project.version},
-                            org.azeckoski.reflectutils.refmap;version=${project.version},
-                            org.azeckoski.reflectutils.transcoders;version=${project.version}
+                            org.azeckoski.reflectutils;version=${reflectionutils.version},
+                            org.azeckoski.reflectutils.annotations;version=${reflectionutils.version},
+                            org.azeckoski.reflectutils.beanutils;version=${reflectionutils.version},
+                            org.azeckoski.reflectutils.converters;version=${reflectionutils.version},
+                            org.azeckoski.reflectutils.converters.api;version=${reflectionutils.version},
+                            org.azeckoski.reflectutils.exceptions;version=${reflectionutils.version},
+                            org.azeckoski.reflectutils.map;version=${reflectionutils.version},
+                            org.azeckoski.reflectutils.refmap;version=${reflectionutils.version},
+                            org.azeckoski.reflectutils.transcoders;version=${reflectionutils.version}
                         </Export-Package>
                         <Bundle-Vendor>Google Reflectutils Group</Bundle-Vendor>
                         <Bundle-DocURL>http://code.google.com/p/reflectutils/</Bundle-DocURL>

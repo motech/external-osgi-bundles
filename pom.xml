@@ -48,6 +48,10 @@
         <module>xforms</module>
         <module>postgresql</module>
         <module>wiser</module>
+        <module>hapi</module>
+        <module>liquibase</module>
+        <module>reflectutils</module>
+        <module>simplexml</module>
     </modules>
 
     <build>

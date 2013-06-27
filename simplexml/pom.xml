@@ -5,20 +5,26 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.simpleframework</groupId>
     <artifactId>org.motechproject.org.simpleframework.xml</artifactId>
-    <version>1.6.2</version>
+    <version>${simplexml.version}-${release.tag}</version>
     <packaging>bundle</packaging>
     <name>Simple XML</name>
     <description>Simple is a high performance XML serialization and configuration framework for Java</description>
 
+    <parent>
+        <groupId>org.motechproject</groupId>
+        <artifactId>external-osgi-bundles</artifactId>
+        <version>1.0.0-r017</version>
+    </parent>
+
     <properties>
-        <modules.root.dir>${basedir}/../..</modules.root.dir>
+        <simplexml.version>1.6.2</simplexml.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.simpleframework</groupId>
             <artifactId>simple-xml</artifactId>
-            <version>${project.version}</version>
+            <version>${simplexml.version}</version>
         </dependency>
     </dependencies>
 
@@ -32,13 +38,13 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
-                            org.simpleframework.xml;version=${project.version},
-                            org.simpleframework.xml.filter;version=${project.version},
-                            org.simpleframework.xml.graph;version=${project.version},
-                            org.simpleframework.xml.load;version=${project.version},
-                            org.simpleframework.xml.stream;version=${project.version},
-                            org.simpleframework.xml.transform;version=${project.version},
-                            org.simpleframework.xml.util;version=${project.version}
+                            org.simpleframework.xml;version=${simplexml.version},
+                            org.simpleframework.xml.filter;version=${simplexml.version},
+                            org.simpleframework.xml.graph;version=${simplexml.version},
+                            org.simpleframework.xml.load;version=${simplexml.version},
+                            org.simpleframework.xml.stream;version=${simplexml.version},
+                            org.simpleframework.xml.transform;version=${simplexml.version},
+                            org.simpleframework.xml.util;version=${simplexml.version}
                         </Export-Package>
                         <Bundle-Vendor>Simple</Bundle-Vendor>
                         <Bundle-DocURL>http://simple.sourceforge.net/</Bundle-DocURL>
