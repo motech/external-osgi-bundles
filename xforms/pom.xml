@@ -42,7 +42,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Export-Package>org.fcitmuk.epihandy</Export-Package>
+                        <Export-Package>org.fcitmuk.epihandy;version=${project.version}</Export-Package>
                         <Import-Package>
                             !com.sun.org.apache.xerces.internal.impl.dv.util,
                             *

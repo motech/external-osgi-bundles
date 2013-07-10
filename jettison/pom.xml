@@ -73,7 +73,7 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
-                            org.codehaus.jettison.*;version=${project.version},
+                            org.codehaus.jettison.*;version=${project.version}
                         </Export-Package>
                         <Bundle-Vendor>Jettison a json stax implementation</Bundle-Vendor>
                         <Bundle-DocURL>http://jettison.codehaus.org/</Bundle-DocURL>

@@ -38,13 +38,13 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
-                            org.simpleframework.xml;version=${simplexml.version},
-                            org.simpleframework.xml.filter;version=${simplexml.version},
-                            org.simpleframework.xml.graph;version=${simplexml.version},
-                            org.simpleframework.xml.load;version=${simplexml.version},
-                            org.simpleframework.xml.stream;version=${simplexml.version},
-                            org.simpleframework.xml.transform;version=${simplexml.version},
-                            org.simpleframework.xml.util;version=${simplexml.version}
+                            org.simpleframework.xml;version=${project.version},
+                            org.simpleframework.xml.filter;version=${project.version},
+                            org.simpleframework.xml.graph;version=${project.version},
+                            org.simpleframework.xml.load;version=${project.version},
+                            org.simpleframework.xml.stream;version=${project.version},
+                            org.simpleframework.xml.transform;version=${project.version},
+                            org.simpleframework.xml.util;version=${project.version}
                         </Export-Package>
                         <Bundle-Vendor>Simple</Bundle-Vendor>
                         <Bundle-DocURL>http://simple.sourceforge.net/</Bundle-DocURL>

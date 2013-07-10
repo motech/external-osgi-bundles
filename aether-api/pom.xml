@@ -250,8 +250,8 @@
                         <Export-Package>
                             org.sonatype.aether.*;version=${project.version},
                             org.apache.maven.*;version=${project.version},
-                            org.apache.maven.repository.internal,
-                            org.codehaus.plexus,
+                            org.apache.maven.repository.internal;version=${project.version},
+                            org.codehaus.plexus;version=${project.version}
                         </Export-Package>
                         <Import-Package>
                             javax.net.ssl;resolution:=optional,

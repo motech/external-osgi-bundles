@@ -71,7 +71,7 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
-                            org.motechproject.quartz.*;version=${quartz.couchdb.version}
+                            org.motechproject.quartz.*;version=${project.version}
                         </Export-Package>
                         <Import-Package>
                             *

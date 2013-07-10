@@ -79,7 +79,7 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
-                            org.subethamail.wiser;version=${project.version},
+                            org.subethamail.wiser;version=${project.version}
                         </Export-Package>
                         <Bundle-Vendor>Motech Wiser Project</Bundle-Vendor>
                         <Bundle-DocURL>https://code.google.com/p/subethasmtp</Bundle-DocURL>

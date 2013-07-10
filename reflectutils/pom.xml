@@ -50,15 +50,15 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
-                            org.azeckoski.reflectutils;version=${reflectionutils.version},
-                            org.azeckoski.reflectutils.annotations;version=${reflectionutils.version},
-                            org.azeckoski.reflectutils.beanutils;version=${reflectionutils.version},
-                            org.azeckoski.reflectutils.converters;version=${reflectionutils.version},
-                            org.azeckoski.reflectutils.converters.api;version=${reflectionutils.version},
-                            org.azeckoski.reflectutils.exceptions;version=${reflectionutils.version},
-                            org.azeckoski.reflectutils.map;version=${reflectionutils.version},
-                            org.azeckoski.reflectutils.refmap;version=${reflectionutils.version},
-                            org.azeckoski.reflectutils.transcoders;version=${reflectionutils.version}
+                            org.azeckoski.reflectutils;version=${project.version},
+                            org.azeckoski.reflectutils.annotations;version=${project.version},
+                            org.azeckoski.reflectutils.beanutils;version=${project.version},
+                            org.azeckoski.reflectutils.converters;version=${project.version},
+                            org.azeckoski.reflectutils.converters.api;version=${project.version},
+                            org.azeckoski.reflectutils.exceptions;version=${project.version},
+                            org.azeckoski.reflectutils.map;version=${project.version},
+                            org.azeckoski.reflectutils.refmap;version=${project.version},
+                            org.azeckoski.reflectutils.transcoders;version=${project.version}
                         </Export-Package>
                         <Bundle-Vendor>Google Reflectutils Group</Bundle-Vendor>
                         <Bundle-DocURL>http://code.google.com/p/reflectutils/</Bundle-DocURL>

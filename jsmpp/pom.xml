@@ -97,7 +97,7 @@
                             org.jsmpp.session.connection;version=${project.version},
                             org.jsmpp.session.connection.socket;version=${project.version},
                             org.jsmpp.session.state;version=${project.version},
-                            org.jsmpp.util
+                            org.jsmpp.util;version=${project.version}
                         </Export-Package>
                         <Import-Package>
                             !org.testng,

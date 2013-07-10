@@ -73,7 +73,7 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
-                            org.dom4j.*;version="${project.version}"
+                            org.dom4j.*;version=${project.version}
                         </Export-Package>
                         <Import-Package>
                             org.gjt.xpp;resolution:=optional,

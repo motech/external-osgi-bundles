@@ -95,7 +95,7 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
-                            com.github.ldriscoll.ektorplucene.*;version=${project.version},
+                            com.github.ldriscoll.ektorplucene.*;version=${project.version}
                         </Export-Package>
                         <Bundle-Vendor>Ektorp Lucene</Bundle-Vendor>
                         <Bundle-DocURL>https://github.com/ldriscoll/ektorplucene</Bundle-DocURL>
