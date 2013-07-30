@@ -7,7 +7,7 @@
 
     <groupId>org.motechproject</groupId>
     <artifactId>external-osgi-bundles</artifactId>
-    <version>1.0.0-r019</version> <!-- do not use parameter in version as maven fails to resolve it -->
+    <version>1.0.1</version> <!-- do not use parameter in version as maven fails to resolve it -->
     <packaging>pom</packaging>
     <name>MOTECH-external-bundles</name>
 
@@ -18,7 +18,7 @@
 
     <properties>
         <jdk.version>1.7</jdk.version>
-        <release.tag>r019</release.tag>
+        <release.tag>r020</release.tag>
     </properties>
 
     <modules>
