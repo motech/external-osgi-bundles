@@ -18,7 +18,7 @@
 
     <properties>
         <jdk.version>1.7</jdk.version>
-        <release.tag>r021</release.tag>
+        <release.tag>r022</release.tag>
     </properties>
 
     <modules>
@@ -52,6 +52,7 @@
         <module>liquibase</module>
         <module>reflectutils</module>
         <module>simplexml</module>
+        <module>commons-configuration</module>
     </modules>
 
     <build>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.apache.commons</groupId>
+    <artifactId>org.motechproject.org.apache.commons.configuration</artifactId>
+    <version>${commons-configuration.version}-${release.tag}</version>
+    <packaging>bundle</packaging>
+
+    <name>commons-configuration</name>
+    <description>Commons Configuration library</description>
+
+    <parent>
+        <groupId>org.motechproject</groupId>
+        <artifactId>external-osgi-bundles</artifactId>
+        <version>1.0.1</version>
+    </parent>
+
+    <properties>
+        <modules.root.dir>${basedir}/../..</modules.root.dir>
+        <commons-configuration.version>1.8</commons-configuration.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>commons-configuration</groupId>
+            <artifactId>commons-configuration</artifactId>
+            <version>${commons-configuration.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>unpack-sources</id>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <phase>package</phase>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/sources</outputDirectory>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>commons-configuration</groupId>
+                                    <artifactId>commons-configuration</artifactId>
+                                    <version>${commons-configuration.version}</version>
+                                    <classifier>sources</classifier>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>2.3.4</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Export-Package>org.apache.commons.configuration;version=${project.version}</Export-Package>
+                        <Import-Package>
+                            org.apache.commons.lang,
+                            org.apache.commons.lang.exception,
+                            org.apache.commons.lang.text,
+                            org.apache.commons.logging,
+                            org.apache.commons.logging.impl,
+                            !*
+                        </Import-Package>
+                        <Bundle-Vendor>Apache Commons Configuration</Bundle-Vendor>
+                        <Bundle-DocURL>http://commons.apache.org/proper/commons-configuration/</Bundle-DocURL>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Embed-Dependency>commons-configuration;inline=true</Embed-Dependency>
+                        <Embed-Transitive>false</Embed-Transitive>
+                    </instructions>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
