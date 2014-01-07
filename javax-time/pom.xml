@@ -50,8 +50,7 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
-                            java.util;version=${project.version},
-                            jvax.time;version=${project.version},
+                            javax.time;version=${project.version},
                             javax.time.calendar;version=${project.version},
                             javax.time.calendar.format;version=${project.version},
                             javax.time.calendar.zone;version=${project.version},
