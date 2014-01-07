@@ -18,7 +18,7 @@
 
     <properties>
         <jdk.version>1.7</jdk.version>
-        <release.tag>r023</release.tag>
+        <release.tag>r024</release.tag>
     </properties>
 
     <modules>
