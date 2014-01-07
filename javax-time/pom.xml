@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <properties>
+        <modules.root.dir>${basedir}/..</modules.root.dir>
+        <javax.time.version>0.6.3</javax.time.version>
+    </properties>
+
+    <groupId>javax.time</groupId>
+    <artifactId>org.motechproject.javax.time</artifactId>
+    <version>${javax.time.version}-${release.tag}</version>
+    <packaging>bundle</packaging>
+
+    <parent>
+        <groupId>org.motechproject</groupId>
+        <artifactId>external-osgi-bundles</artifactId>
+        <version>1.0.1</version>
+    </parent>
+
+    <repositories>
+        <repository>
+            <id>DN_M2_Repo</id>
+            <url>http://www.datanucleus.org/downloads/maven2/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax.time</groupId>
+            <artifactId>time-api</artifactId>
+            <version>${javax.time.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>2.3.4</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Export-Package>
+                            java.util;version=${project.version},
+                            jvax.time;version=${project.version},
+                            javax.time.calendar;version=${project.version},
+                            javax.time.calendar.format;version=${project.version},
+                            javax.time.calendar.zone;version=${project.version},
+                            javax.time.i18n;version=${project.version}
+                        </Export-Package>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Embed-Dependency>time-api;inline=true</Embed-Dependency>
+                        <Embed-Transitive>true</Embed-Transitive>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

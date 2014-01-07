@@ -53,6 +53,7 @@
         <module>reflectutils</module>
         <module>simplexml</module>
         <module>commons-configuration</module>
+        <module>javax-time</module>
     </modules>
 
     <build>
