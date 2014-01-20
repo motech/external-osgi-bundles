@@ -18,7 +18,7 @@
 
     <properties>
         <jdk.version>1.7</jdk.version>
-        <release.tag>r024</release.tag>
+        <release.tag>r025</release.tag>
     </properties>
 
     <modules>
@@ -54,6 +54,7 @@
         <module>simplexml</module>
         <module>commons-configuration</module>
         <module>javax-time</module>
+        <module>reflections</module>
     </modules>
 
     <build>

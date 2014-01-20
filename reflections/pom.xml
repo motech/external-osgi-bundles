@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <properties>
+        <modules.root.dir>${basedir}/..</modules.root.dir>
+        <reflections.version>0.9.9-RC1</reflections.version>
+    </properties>
+
+    <groupId>org.reflections</groupId>
+    <artifactId>org.motechproject.reflections</artifactId>
+    <version>${reflections.version}-${release.tag}</version>
+    <packaging>bundle</packaging>
+
+    <parent>
+        <groupId>org.motechproject</groupId>
+        <artifactId>external-osgi-bundles</artifactId>
+        <version>1.0.1</version>
+    </parent>
+
+    <repositories>
+        <repository>
+            <id>M2_Reflections_Repo</id>
+            <url>http://repo1.maven.org/maven2/org/reflections/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>${reflections.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>2.3.4</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Export-Package>
+                            org.reflections;version=${project.version},
+                            org.reflections.adapters;version=${project.version},
+                            org.reflections.scanners;version=${project.version},
+                            org.reflections.serializers;version=${project.version},
+                            org.reflections.util;version=${project.version},
+                            org.reflections.vfs;version=${project.version}
+                        </Export-Package>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Embed-Dependency>reflections;inline=true</Embed-Dependency>
+                        <Embed-Transitive>true</Embed-Transitive>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
