@@ -8,7 +8,7 @@
 
     <properties>
         <modules.root.dir>${basedir}/..</modules.root.dir>
-        <reflections.version>0.9.9-RC1</reflections.version>
+        <reflections.version>0.9.5</reflections.version>
     </properties>
 
     <groupId>org.reflections</groupId>
@@ -49,6 +49,9 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
+                        <Import-Package>
+                            !*
+                        </Import-Package>
                         <Export-Package>
                             org.reflections;version=${project.version},
                             org.reflections.adapters;version=${project.version},
@@ -58,7 +61,7 @@
                             org.reflections.vfs;version=${project.version}
                         </Export-Package>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                        <Embed-Dependency>reflections;inline=true</Embed-Dependency>
+                        <Embed-Dependency>reflections;inline=true,*;scope=compile|runtime|provided</Embed-Dependency>
                         <Embed-Transitive>true</Embed-Transitive>
                     </instructions>
                 </configuration>
