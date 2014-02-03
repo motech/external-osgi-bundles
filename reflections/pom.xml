@@ -16,6 +16,10 @@
     <version>${reflections.version}-${release.tag}</version>
     <packaging>bundle</packaging>
 
+    <name>Reflections</name>
+    <description>Reflections - a Java runtime metadata analysis</description>
+    <url>http://code.google.com/p/reflections/</url>
+
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
@@ -37,6 +41,53 @@
             <groupId>org.reflections</groupId>
             <artifactId>reflections</artifactId>
             <version>${reflections.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>dom4j</groupId>
+                    <artifactId>dom4j</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.google.guava</groupId>
+                    <artifactId>guava</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javassist</groupId>
+                    <artifactId>javassist</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.google.code.gson</groupId>
+                    <artifactId>gson</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>com.springsource.slf4j.api</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.dom4j</groupId>
+            <artifactId>com.springsource.org.dom4j</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.javassist</groupId>
+            <artifactId>javassist</artifactId>
+            <version>3.18.1-GA</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>org.motechproject.com.google.code.gson</artifactId>
+            <version>1.7.1-${release.tag}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>org.motechproject.guava</artifactId>
+            <version>0.8.0-${release.tag}</version>
         </dependency>
     </dependencies>
 
@@ -50,7 +101,8 @@
                 <configuration>
                     <instructions>
                         <Import-Package>
-                            !*
+                            org.jboss.vfs.*;resolution:=optional,
+                            *
                         </Import-Package>
                         <Export-Package>
                             org.reflections;version=${project.version},
@@ -61,8 +113,7 @@
                             org.reflections.vfs;version=${project.version}
                         </Export-Package>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                        <Embed-Dependency>reflections;inline=true,*;scope=compile|runtime|provided</Embed-Dependency>
-                        <Embed-Transitive>true</Embed-Transitive>
+                        <Embed-Dependency>reflections;inline=true</Embed-Dependency>
                     </instructions>
                 </configuration>
             </plugin>

@@ -18,7 +18,7 @@
 
     <properties>
         <jdk.version>1.7</jdk.version>
-        <release.tag>r026</release.tag>
+        <release.tag>r027</release.tag>
     </properties>
 
     <modules>
@@ -55,6 +55,7 @@
         <module>commons-configuration</module>
         <module>javax-time</module>
         <module>reflections</module>
+        <module>guava</module>
     </modules>
 
     <build>
