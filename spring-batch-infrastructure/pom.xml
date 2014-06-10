@@ -17,12 +17,12 @@
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
-        <version>1.0.2</version>
+        <version>1.0.3</version>
     </parent>
 
     <properties>
         <modules.root.dir>${basedir}/..</modules.root.dir>
-        <spring-batch-infrastructure.version>3.0.0.RELEASE</spring-batch-infrastructure.version>
+        <spring-batch-infrastructure.version>3.0.0.M3</spring-batch-infrastructure.version>
     </properties>
 
     <dependencies>
@@ -30,8 +30,9 @@
             <groupId>org.springframework.batch</groupId>
             <artifactId>spring-batch-infrastructure</artifactId>
             <version>${spring-batch-infrastructure.version}</version>
-            
-        </dependency>
+<scope>system</scope>
+<systemPath>${basedir}/spring-batch-infrastructure-3.0.0.M3.jar</systemPath>
+</dependency>
 
     </dependencies>
 
@@ -73,154 +74,41 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
+	
                         <Export-Package>
-                          org.springframework.batch.item;version="3.0.0.RELEASE";uses
- :="org.springframework.beans.factory,org.springframework.core.convert
- .converter,org.springframework.core.io",org.springframework.batch.ite
- m.adapter;version="3.0.0.RELEASE";uses:="org.springframework.batch.item,or
- g.springframework.beans.factory,org.springframework.util",org.springf
- ramework.batch.item.amqp;version="3.0.0.RELEASE";uses:="org.springframewor
- k.amqp.core,org.springframework.batch.item",org.springframework.batch
- .item.data;version="3.0.0.RELEASE";uses:="org.springframework.batch.item,o
- rg.springframework.batch.item.support,org.springframework.beans.facto
- ry,org.springframework.data.gemfire,org.springframework.data.mongodb.
- core,org.springframework.data.neo4j.conversion,org.springframework.da
- ta.neo4j.template,org.springframework.data.repository,org.springframe
- work.transaction.support",org.springframework.batch.item.database;ver
- sion="3.0.0.RELEASE";uses:="com.ibatis.sqlmap.client,javax.persistence,jav
- ax.sql,org.hibernate,org.springframework.batch.item,org.springframewo
- rk.batch.item.database.orm,org.springframework.batch.item.support,org
- .springframework.beans.factory,org.springframework.dao,org.springfram
- ework.jdbc,org.springframework.jdbc.core,org.springframework.jdbc.cor
- e.namedparam,org.springframework.jdbc.datasource,org.springframework.
- jdbc.support,org.springframework.orm.hibernate3",org.springframework.
- batch.item.database.orm;version="3.0.0.RELEASE";uses:="javax.persistence,o
- rg.hibernate,org.springframework.beans.factory",org.springframework.b
- atch.item.database.support;version="3.0.0.RELEASE";uses:="javax.sql,org.sp
- ringframework.batch.item.database,org.springframework.beans.factory,o
- rg.springframework.jdbc.support.incrementer",org.springframework.batc
- h.item.file;version="3.0.0.RELEASE";uses:="org.springframework.batch.item,
- org.springframework.batch.item.file.separator,org.springframework.bat
- ch.item.file.transform,org.springframework.batch.item.support,org.spr
- ingframework.beans.factory,org.springframework.core.io",org.springfra
- mework.batch.item.file.mapping;version="3.0.0.RELEASE";uses:="org.springfr
- amework.batch.item.file,org.springframework.batch.item.file.transform
- ,org.springframework.batch.support,org.springframework.beans.factory,
- org.springframework.validation",org.springframework.batch.item.file.s
- eparator;version="3.0.0.RELEASE",org.springframework.batch.item.file.trans
- form;version="3.0.0.RELEASE";uses:="org.springframework.beans.factory",org
- .springframework.batch.item.jms;version="3.0.0.RELEASE";uses:="org.springf
- ramework.batch.item,org.springframework.beans.factory,org.springframe
- work.jms.core,org.springframework.retry.interceptor",org.springframew
- ork.batch.item.mail;version="3.0.0.RELEASE";uses:="org.springframework.bat
- ch.item,org.springframework.beans.factory,org.springframework.mail",o
- rg.springframework.batch.item.mail.javamail;version="3.0.0.RELEASE";uses:=
- "org.springframework.batch.item,org.springframework.batch.item.mail,o
- rg.springframework.mail,org.springframework.mail.javamail",org.spring
- framework.batch.item.support;version="3.0.0.RELEASE";uses:="org.springfram
- ework.batch.item,org.springframework.beans.factory,org.springframewor
- k.classify",org.springframework.batch.item.util;version="3.0.0.RELEASE",or
- g.springframework.batch.item.validator;version="3.0.0.RELEASE";uses:="org.
- springframework.batch.item,org.springframework.beans.factory,org.spri
- ngframework.validation",org.springframework.batch.item.xml;version="3
- .0.0.M3";uses:="javax.xml.stream,javax.xml.transform,org.springframew
- ork.batch.item,org.springframework.batch.item.file,org.springframewor
- k.batch.item.support,org.springframework.beans.factory,org.springfram
- ework.core.io,org.springframework.oxm",org.springframework.batch.item
- .xml.stax;version="3.0.0.RELEASE";uses:="javax.xml.namespace,javax.xml.str
- eam,javax.xml.stream.events",org.springframework.batch.jsr.item;versi
- on="3.0.0.RELEASE";uses:="javax.batch.api.chunk,org.springframework.batch.
- item",org.springframework.batch.jsr.repeat;version="3.0.0.RELEASE";uses:="
- javax.batch.api.chunk,org.springframework.batch.repeat",org.springfra
- mework.batch.poller;version="3.0.0.RELEASE",org.springframework.batch.repe
- at;version="3.0.0.RELEASE";uses:="org.springframework.core",org.springfram
- ework.batch.repeat.callback;version="3.0.0.RELEASE";uses:="org.springframe
- work.batch.repeat",org.springframework.batch.repeat.context;version="
- 3.0.0.RELEASE";uses:="org.springframework.batch.repeat,org.springframework
- .core",org.springframework.batch.repeat.exception;version="3.0.0.RELEASE";
- uses:="org.springframework.batch.repeat,org.springframework.beans.fac
- tory,org.springframework.classify",org.springframework.batch.repeat.i
- nterceptor;version="3.0.0.RELEASE";uses:="org.aopalliance.intercept,org.sp
- ringframework.batch.repeat",org.springframework.batch.repeat.listener
- ;version="3.0.0.RELEASE";uses:="org.springframework.batch.repeat",org.spri
- ngframework.batch.repeat.policy;version="3.0.0.RELEASE";uses:="org.springf
- ramework.batch.repeat,org.springframework.batch.repeat.context",org.s
- pringframework.batch.repeat.support;version="3.0.0.RELEASE";uses:="org.spr
- ingframework.batch.repeat,org.springframework.batch.repeat.exception,
- org.springframework.core.task",org.springframework.batch.support;vers
- ion="3.0.0.RELEASE";uses:="javax.sql,org.springframework.beans,org.springf
- ramework.beans.factory,org.springframework.core.io,org.springframewor
- k.jdbc.support,org.springframework.util",org.springframework.batch.su
- pport.annotation;version="3.0.0.RELEASE",org.springframework.batch.support
- .transaction;version="3.0.0.RELEASE";uses:="org.aopalliance.intercept,org.
- springframework.transaction,org.springframework.transaction.support"
+                          org.springframework.batch.*
                         </Export-Package>
-<!--<Import-Package>
-com.ibatis.sqlmap.client;version="[2.3.0,3.0.0)";resol
- ution:="optional",com.ibatis.sqlmap.engine.execution;version="[2.3.0,
- 3.0.0)";resolution:="optional",
-com.mongodb.util;version="[2.1.9,3.0.0
- )";resolution:="optional",javax.batch.api.chunk,javax.batch.operation
- s,javax.jms;version="0";resolution:="optional",javax.mail.internet;ve
- rsion="0";resolution:="optional",javax.persistence;version="0";resolu
- tion:="optional",javax.sql;version="0";resolution:="optional",javax.x
- ml.namespace;version="0";resolution:="optional",javax.xml.stream;vers
- ion="0";resolution:="optional",javax.xml.stream.events;version="0";re
- solution:="optional",javax.xml.transform;version="0";resolution:="opt
- ional",org.aopalliance.aop;version="[1.0.0,2.0.0)",org.aopalliance.in
- tercept;version="[1.0.0,2.0.0)",org.apache.commons.logging;version="[
- 1.1.0,2.0.0)",org.codehaus.jackson;version="[1.0.1,1.1)";resolution:=
- "optional",org.codehaus.jackson.map;version="[1.0.1,1.1)";resolution:
- ="optional",org.hibernate;version="[3.2.5.ga,3.3.0.ga)";resolution:="
- optional",org.springframework.amqp.core;version="[1.1.0,2.0.0)";resol
- ution:="optional",org.springframework.aop;version="[3.1.2,4.0.0)",org
- .springframework.aop.framework;version="[3.1.2,4.0.0)",org.springfram
- ework.aop.support;version="[3.1.2,4.0.0)",org.springframework.batch.c
- ore;version="[2.0.0,3.0.0]",org.springframework.beans;version="[3.1.2
- ,4.0.0)",org.springframework.beans.factory;version="[3.1.2,4.0.0)",or
- g.springframework.classify;version="[1.0.0,2.0.0)";resolution:="optio
- nal",org.springframework.core;version="[3.1.2,4.0.0)",org.springframe
- work.core.annotation;version="[3.1.2,4.0.0)",org.springframework.core
- .convert.converter;version="[3.1.2,4.0.0)",org.springframework.core.i
- o;version="[3.1.2,4.0.0)",org.springframework.core.task;version="[3.1
- .2,4.0.0)",org.springframework.dao;version="[3.1.2,4.0.0)";resolution
- :="optional",org.springframework.data.domain;version="[1.5.0,2.0.0)";
- resolution:="optional",org.springframework.data.gemfire;version="[1.3
- .0,2.0.0)";resolution:="optional",org.springframework.data.mongodb.co
- re;version="[1.1.0,2.0.0)";resolution:="optional",org.springframework
- .data.mongodb.core.query;version="[1.1.0,2.0.0)";resolution:="optiona
- l",org.springframework.data.neo4j.conversion;version="[2.2.0,3.0.0)";
- resolution:="optional",org.springframework.data.neo4j.template;versio
- n="[2.2.0,3.0.0)";resolution:="optional",org.springframework.data.rep
- ository;version="[1.5.0,2.0.0)";resolution:="optional",org.springfram
- ework.expression,org.springframework.expression.spel.standard,org.spr
- ingframework.jdbc;version="[3.1.2,4.0.0)";resolution:="optional",org.
- springframework.jdbc.core;version="[3.1.2,4.0.0)";resolution:="option
- al",org.springframework.jdbc.core.metadata;version="[3.1.2,4.0.0)";re
- solution:="optional",org.springframework.jdbc.core.namedparam;version
- ="[3.1.2,4.0.0)";resolution:="optional",org.springframework.jdbc.data
- source;version="[3.1.2,4.0.0)";resolution:="optional",org.springframe
- work.jdbc.support;version="[3.1.2,4.0.0)";resolution:="optional",org.
- springframework.jdbc.support.incrementer;version="[3.1.2,4.0.0)";reso
- lution:="optional",org.springframework.jms;version="[3.1.2,4.0.0)";re
- solution:="optional",org.springframework.jms.core;version="[3.1.2,4.0
- .0)";resolution:="optional",org.springframework.mail;version="[3.1.2,
- 4.0.0)";resolution:="optional",org.springframework.mail.javamail;vers
- ion="[3.1.2,4.0.0)";resolution:="optional",org.springframework.orm.hi
- bernate3;version="[3.1.2,4.0.0)";resolution:="optional",org.springfra
- mework.orm.jpa;version="[3.1.2,4.0.0)";resolution:="optional",org.spr
- ingframework.oxm;version="[3.1.2,4.0.0)";resolution:="optional",org.s
- pringframework.retry.interceptor;version="[1.0.0,2.0.0)";resolution:=
- "optional",org.springframework.transaction;version="[3.1.2,4.0.0)";re
- solution:="optional",org.springframework.transaction.support;version=
- "[3.1.2,4.0.0)";resolution:="optional",org.springframework.util;versi
- on="[3.1.2,4.0.0)";resolution:="optional",org.springframework.validat
- ion;version="[3.1.2,4.0.0)";resolution:="optional"
-</Import-Package> -->
-                        <Bundle-Vendor>Spring</Bundle-Vendor>
+	<Import-Package>
+com.ibatis.sqlmap.client,com.ibatis.sqlmap.engine.exec
+ ution,javax.batch.api.chunk,javax.batch.operations,javax.jms,javax.ma
+ il.internet,javax.persistence,javax.sql,javax.xml.namespace,javax.xml
+ .stream,javax.xml.stream.events,javax.xml.transform,org.aopalliance.a
+ op,org.aopalliance.intercept,org.apache.commons.logging,org.codehaus.
+ jackson,org.codehaus.jackson.map,org.hibernate,org.springframework.am
+ qp.core,org.springframework.aop,org.springframework.aop.framework,org
+ .springframework.aop.support,org.springframework.beans,org.springfram
+ ework.beans.factory,org.springframework.classify,org.springframework.
+ core,org.springframework.core.annotation,org.springframework.core.con
+ vert.converter,org.springframework.core.io,org.springframework.core.t
+ ask,org.springframework.dao,org.springframework.data.domain,org.sprin
+ gframework.data.repository,org.springframework.expression,org.springf
+ ramework.expression.spel.standard,org.springframework.jdbc,org.spring
+ framework.jdbc.core,org.springframework.jdbc.core.metadata,org.spring
+ framework.jdbc.core.namedparam,org.springframework.jdbc.datasource,or
+ g.springframework.jdbc.support,org.springframework.jdbc.support.incre
+ menter,org.springframework.jms,org.springframework.jms.core,org.sprin
+ gframework.mail,org.springframework.mail.javamail,org.springframework
+ .orm.hibernate3,org.springframework.orm.jpa,org.springframework.oxm,o
+ rg.springframework.retry.interceptor,org.springframework.transaction,
+ org.springframework.transaction.support,org.springframework.util,org.
+ springframework.validation,org.springframework.batch.item.database.support
+</Import-Package>
+
+     <Bundle-Vendor>Spring</Bundle-Vendor>
                        <!-- <Bundle-DocURL>https://github.com/KentBeck/junit/</Bundle-DocURL> -->
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                        <Embed-Dependency>spring-batch-infrastructure;inline=true</Embed-Dependency>
+	<!--<Include-Resource>spring-batch-infrastructure-3.0.0.RELEASE.jar</Include-Resource>-->
+                        <Embed-dependency>spring-batch-infrastrcture;inline=true</Embed-dependency>
                     </instructions>
                 </configuration>
             </plugin>

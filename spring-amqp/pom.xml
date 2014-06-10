@@ -6,32 +6,32 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.dom4j</groupId>
-    <artifactId>org.motechproject.org.dom4j</artifactId>
-    <version>${dom4j.version}-${release.tag}</version>
+    <groupId>org.springframework.amqp</groupId>
+    <artifactId>org.motechproject.org.springframework.amqp</artifactId>
+    <version>${org.springframework.amqp.version}-${release.tag}</version>
     <packaging>bundle</packaging>
 
+    <name>Spring AMQP</name>
+    <description>Spring AMQP library</description>
+
     <parent>
-        <artifactId>external-osgi-bundles</artifactId>
         <groupId>org.motechproject</groupId>
+        <artifactId>external-osgi-bundles</artifactId>
         <version>1.0.3</version>
     </parent>
 
-    <name>dom4j</name>
-    <description>Dom4j</description>
-
     <properties>
-        <modules.root.dir>${basedir}/../..</modules.root.dir>
-        <dom4j.version>1.6.1</dom4j.version>
+        <modules.root.dir>${basedir}/..</modules.root.dir>
+        <org.springframework.amqp.version>1.3.3.RELEASE</org.springframework.amqp.version>
     </properties>
 
     <dependencies>
+
         <dependency>
-            <groupId>dom4j</groupId>
-            <artifactId>dom4j</artifactId>
-            <version>${dom4j.version}</version>
-            <scope>provided</scope>
-        </dependency>
+            <groupId>org.springframework.amqp</groupId>
+		<artifactId>spring-amqp</artifactId>
+            <version>${org.springframework.amqp.version}</version>
+         </dependency>
     </dependencies>
 
     <build>
@@ -50,9 +50,9 @@
                             <outputDirectory>${project.build.directory}/sources</outputDirectory>
                             <artifactItems>
                                 <artifactItem>
-                                    <groupId>dom4j</groupId>
-                                    <artifactId>dom4j</artifactId>
-                                    <version>${dom4j.version}</version>
+                                    <groupId>org.springframework.amqp</groupId>
+		<artifactId>spring-amqp</artifactId>
+                                    <version>${org.springframework.amqp.version}</version>
                                     <classifier>sources</classifier>
                                 </artifactItem>
                             </artifactItems>
@@ -73,28 +73,18 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
-                            org.dom4j.*;version=${project.version}
+                            org.springframework.amqp.core.*,
+			    org.springframework.amqp.*
                         </Export-Package>
-                        <Import-Package>
-                            org.gjt.xpp;resolution:=optional,
-                            org.jaxen.*;resolution:=optional,
-                            org.jaxen.dom4j;resolution:=optional,
-                            org.relaxng.datatype;resolution:=optional,
-                            javax.xml.bind;resolution:=optional,
-                            com.sun.msv.*;resolution:=optional,
-                            org.xmlpull.v1;resolution:=optional,
-                            *
-                        </Import-Package>
-                        <Bundle-Vendor>Dom4j</Bundle-Vendor>
-                        <Bundle-DocURL>http://dom4j.sourceforge.net/</Bundle-DocURL>
+                        <Bundle-Vendor>Spring</Bundle-Vendor>
+                        <!--<Bundle-DocURL>https://github.com/KentBeck/junit/</Bundle-DocURL>-->
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                        <Embed-Dependency>dom4j;inline=true</Embed-Dependency>
+                        <Embed-Dependency>spring-amqp;inline=true</Embed-Dependency>
                     </instructions>
                 </configuration>
             </plugin>
 
         </plugins>
     </build>
-
 
 </project>
