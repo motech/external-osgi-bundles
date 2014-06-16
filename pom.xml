@@ -7,7 +7,7 @@
 
     <groupId>org.motechproject</groupId>
     <artifactId>external-osgi-bundles</artifactId>
-    <version>1.0.4</version> <!-- do not use parameter in version as maven fails to resolve it -->
+    <version>1.0.5</version> <!-- do not use parameter in version as maven fails to resolve it -->
     <packaging>pom</packaging>
     <name>MOTECH-external-bundles</name>
 
@@ -59,6 +59,7 @@
 	<module>spring-batch-core</module>
 	<module>spring-batch-infrastructure</module>
 	<module>spring-amqp</module>
+	<module>spring-retry</module>
     </modules>
 
     <build>

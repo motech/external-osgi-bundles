@@ -8,7 +8,7 @@
 
     <groupId>org.springframework.retry</groupId>
     <artifactId>org.motechproject.org.springframework.retry</artifactId>
-    <version>${org.springframework.retry.version}-${release.tag}</version>
+    <version>1.0.5</version>
     <packaging>bundle</packaging>
 
     <name>Spring Retry</name>
@@ -17,7 +17,7 @@
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
-        <version>1.0.4</version>
+        <version>1.0.5</version>
     </parent>
 
     <properties>
