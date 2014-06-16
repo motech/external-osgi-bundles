@@ -6,12 +6,13 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.bea.xml.stream</groupId>
-    <artifactId>org.motechproject.com.bea.xml.stream</artifactId>
-    <version>${stax.version}-${release.tag}</version>
+    <groupId>org.springframework.retry</groupId>
+    <artifactId>org.motechproject.org.springframework.retry</artifactId>
+    <version>${org.springframework.retry.version}-${release.tag}</version>
     <packaging>bundle</packaging>
 
-    <name>StAX</name>
+    <name>Spring Retry</name>
+    <description>Spring Retry library</description>
 
     <parent>
         <groupId>org.motechproject</groupId>
@@ -20,17 +21,19 @@
     </parent>
 
     <properties>
-        <modules.root.dir>${basedir}/../..</modules.root.dir>
-        <stax.version>1.2.0</stax.version>
+        <modules.root.dir>${basedir}/..</modules.root.dir>
+        <org.springframework.retry.version>1.1.0.RELEASE</org.springframework.retry.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>stax</groupId>
-            <artifactId>stax</artifactId>
-            <version>${stax.version}</version>
-            <scope>provided</scope>
-        </dependency>
+
+
+<dependency>
+
+  	<groupId>org.springframework.retry</groupId>
+	<artifactId>spring-retry</artifactId>
+            <version>${org.springframework.retry.version}</version>
+         </dependency>
     </dependencies>
 
     <build>
@@ -49,9 +52,9 @@
                             <outputDirectory>${project.build.directory}/sources</outputDirectory>
                             <artifactItems>
                                 <artifactItem>
-                                    <groupId>stax</groupId>
-                                    <artifactId>stax</artifactId>
-                                    <version>${stax.version}</version>
+                                    <groupId>org.springframework.retry</groupId>
+		<artifactId>spring-retry</artifactId>
+                                    <version>${org.springframework.retry.version}</version>
                                     <classifier>sources</classifier>
                                 </artifactItem>
                             </artifactItems>
@@ -72,19 +75,13 @@
                 <configuration>
                     <instructions>
                         <Export-Package>
-                            com.bea.xml.stream;version=${project.version},
-                            com.bea.xml.stream.events;version=${project.version},
-                            com.bea.xml.stream.filters;version=${project.version},
-                            com.bea.xml.stream.reader;version=${project.version},
-                            com.bea.xml.stream.samples;version=${project.version},
-                            com.bea.xml.stream.util;version=${project.version},
-                            com.wutka.dtd;version=${project.version}
+                            org.springframework.classify.*;version=${org.springframework.retry.version},
+			    org.springframework.retry.*;version=${org.springframework.retry.version}
                         </Export-Package>
-                        <Bundle-Vendor>StAX</Bundle-Vendor>
-                        <Bundle-DocURL>http://stax.codehaus.org/</Bundle-DocURL>
+                        <Bundle-Vendor>Spring</Bundle-Vendor>
+                        <!--<Bundle-DocURL>https://github.com/KentBeck/junit/</Bundle-DocURL>-->
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                        <Embed-Dependency>stax;inline=true</Embed-Dependency>
-                        <Embed-Transitive>false</Embed-Transitive>
+                        <Embed-Dependency>spring-retry;inline=true</Embed-Dependency>
                     </instructions>
                 </configuration>
             </plugin>
