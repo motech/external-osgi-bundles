@@ -56,6 +56,7 @@
         <module>javax-time</module>
         <module>reflections</module>
         <module>guava</module>
+        <module>mysql</module>
 	<module>spring-batch-core</module>
 	<module>spring-batch-infrastructure</module>
 	<module>spring-amqp</module>
