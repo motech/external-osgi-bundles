@@ -9,7 +9,7 @@
     <properties>
         <modules.root.dir>${basedir}/..</modules.root.dir>
         <mysql.version>5.1.32</mysql.version>
-        <bundle.version>0.1.0</bundle.version>
+        <bundle.version>5.1.32</bundle.version>
     </properties>
 
     <groupId>com.mysql.jdbc</groupId>
