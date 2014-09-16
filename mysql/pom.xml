@@ -55,7 +55,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Export-Package>                        	
+                        <Export-Package>
                             com.mysql.jdbc;version=${project.version},
                             com.mysql.jdbc.authentication;version=${project.version},
                             com.mysql.jdbc.configs;version=${project.version},
