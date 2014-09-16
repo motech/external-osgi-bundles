@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <properties>
+        <modules.root.dir>${basedir}/..</modules.root.dir>
+        <mysql.version>5.1.32</mysql.version>
+        <bundle.version>0.1.0</bundle.version>
+    </properties>
+
+    <groupId>com.mysql.jdbc</groupId>
+    <artifactId>org.motechproject.com.mysql.jdbc</artifactId>
+    <version>${bundle.version}-${release.tag}</version>
+    <packaging>bundle</packaging>
+
+    <name>MySQL java connector</name>
+    <description>
+    MySQL java connector
+    </description>
+
+    <parent>
+        <groupId>org.motechproject</groupId>
+        <artifactId>external-osgi-bundles</artifactId>
+        <version>1.0.6</version>
+    </parent>
+
+    <repositories>
+        <repository>
+            <id>M2_Reflections_Repo</id>
+            <url>http://repo1.maven.org/maven2/org/reflections/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.32</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>2.3.4</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Export-Package>                        	
+                            com.mysql.jdbc;version=${project.version},
+                            com.mysql.jdbc.authentication;version=${project.version},
+                            com.mysql.jdbc.configs;version=${project.version},
+                            com.mysql.jdbc.exceptions;version=${project.version},
+                            com.mysql.jdbc.jdbc4;version=${project.version},
+                            com.mysql.jdbc.jmx;version=${project.version},
+                            com.mysql.jdbc.integration.c3p0;version=${project.version},
+                            com.mysql.jdbc.integration.jboss;version=${project.version},
+                            com.mysql.jdbc.interceptors;version=${project.version},
+                            com.mysql.jdbc.jdbc2.optional;version=${project.version},
+                            com.mysql.jdbc.log;version=${project.version},
+                            com.mysql.jdbc.profiler;version=${project.version},
+                            com.mysql.jdbc.util;version=${project.version},
+                            org.gjt.mm.mysql;version=${project.version}
+                        </Export-Package>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Embed-Dependency>mysql;inline=true</Embed-Dependency>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
