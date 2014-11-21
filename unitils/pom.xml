@@ -43,7 +43,6 @@
             <groupId>org.unitils</groupId>
             <artifactId>unitils-core</artifactId>
             <version>${unitils.version}</version>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -89,7 +88,7 @@
                             org.unitils.util;version=${project.version}
                         </Export-Package>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                        <Bundle-Vendor>Json</Bundle-Vendor>
+                        <Bundle-Vendor>willemijnwouters</Bundle-Vendor>
                         <Embed-Dependency>unitils;inline=true</Embed-Dependency>
                         <Embed-Transitive>true</Embed-Transitive>
                     </instructions>
