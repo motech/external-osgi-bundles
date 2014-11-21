@@ -6,7 +6,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <name>Unitis</name>
+    <name>Unitils</name>
     <description>Unitils aimes at making unit and integration testing easy and maintainable.</description>
 
     <properties>
@@ -16,13 +16,13 @@
 
     <groupId>org.unitils</groupId>
     <artifactId>org.motechproject.org.unitils</artifactId>
-    <version>${json.version}-${release.tag}</version>
+    <version>${unitils.version}-${release.tag}</version>
     <packaging>bundle</packaging>
 
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
-        <version>${unitils.version}-${release.tag}</version>
+        <version>1.0.8</version>
     </parent>
 
     <repositories>

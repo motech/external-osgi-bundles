@@ -59,7 +59,7 @@
         <module>spring-batch-infrastructure</module>
         <module>spring-amqp</module>
         <module>spring-retry</module>
-        <module>unitis</module>
+        <module>unitils</module>
     </modules>
 
     <build>
