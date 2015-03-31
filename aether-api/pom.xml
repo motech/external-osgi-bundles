@@ -14,7 +14,7 @@
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
-        <version>1.0.8</version>
+        <version>1.0.9</version>
     </parent>
 
     <properties>
@@ -80,42 +80,21 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <!--<dependency>
-            <groupId>org.beanshell</groupId>
-            <artifactId>com.springsource.bsh</artifactId>
-            <version>2.0.0.b4</version>
-        </dependency>-->
         <dependency>
-            <groupId>org.apache.bsf</groupId>
-            <artifactId>com.springsource.org.apache.bsf</artifactId>
-            <version>2.4.0</version>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.bsf</artifactId>
+            <version>2.4.0_1</version>
         </dependency>
-        <!--        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>org.springframework.instrument</artifactId>
-            <version>3.1.0.RELEASE</version>
-        </dependency>-->
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>com.springsource.org.apache.commons.io</artifactId>
-            <version>1.4.0</version>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.4</version>
         </dependency>
         <dependency>
             <groupId>org.codehaus.plexus</groupId>
             <artifactId>plexus-classworlds</artifactId>
             <version>2.4</version>
         </dependency>
-        <!--<dependency>
-            <groupId>org.sonatype.sisu</groupId>
-            <artifactId>sisu-guice</artifactId>
-            <version>3.1.1</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>javax.inject</groupId>
-                    <artifactId>javax.inject</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>-->
         <dependency>
             <groupId>org.codehaus.plexus</groupId>
             <artifactId>plexus-component-annotations</artifactId>
@@ -148,14 +127,13 @@
         </dependency>
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>com.springsource.org.apache.httpcomponents.httpclient</artifactId>
-            <version>4.1.1</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.apache.httpcomponents</groupId>
-                    <artifactId>com.springsource.org.apache.httpcomponents.httpclient-cache</artifactId>
-                </exclusion>
-            </exclusions>
+            <artifactId>httpclient-osgi</artifactId>
+            <version>4.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore-osgi</artifactId>
+            <version>4.4</version>
         </dependency>
         <dependency>
             <groupId>org.sonatype.sisu</groupId>
@@ -196,17 +174,6 @@
                             </artifactItems>
                         </configuration>
                     </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
                     <execution>
                         <id>list-dependencies</id>
                         <phase>generate-sources</phase>
@@ -217,13 +184,6 @@
                             <outputFile>target/dependencies.list</outputFile>
                         </configuration>
                     </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
                     <execution>
                         <id>copy-osgi-dependencies</id>
                         <goals>
@@ -238,6 +198,10 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
             </plugin>
 
             <plugin>

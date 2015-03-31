@@ -8,7 +8,7 @@
     <parent>
         <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
-        <version>1.0.8</version>
+        <version>1.0.9</version>
     </parent>
 
     <groupId>org.motechproject</groupId>
@@ -57,7 +57,7 @@
                     <instructions>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Name>c3p0-fragment</Bundle-Name>
-                        <Fragment-Host>com.springsource.com.mchange.v2.c3p0;bundle-version="[0.9.1,1.0)"</Fragment-Host>
+                        <Fragment-Host>org.apache.servicemix.bundles.c3p0;bundle-version="[0.9.1,1.0)"</Fragment-Host>
                         <Import-Package>
                             com.mysql.jdbc;version="[5.1,6)";resolution:=optional,
                             org.postgresql;version="9.1";resolution:=optional
