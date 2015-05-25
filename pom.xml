@@ -37,7 +37,6 @@
         <module>xstream</module>
         <module>hibernate</module>
         <module>xpp3</module>
-        <module>hibernate-validator</module>
         <module>mvel</module>
         <module>c3p0-fragment-bundle</module>
         <module>json</module>
