@@ -39,7 +39,6 @@
         <module>mvel</module>
         <module>c3p0-fragment-bundle</module>
         <module>json</module>
-        <module>ektorplucene</module>
         <module>jettison</module>
         <module>aether-api</module>
         <module>xforms</module>
