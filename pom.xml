@@ -34,7 +34,6 @@
         <module>quartz-couchdb-store</module>
         <module>smslib</module>
         <module>stax</module>
-        <module>xstream</module>
         <module>hibernate</module>
         <module>xpp3</module>
         <module>mvel</module>
@@ -46,7 +45,6 @@
         <module>xforms</module>
         <module>postgresql</module>
         <module>wiser</module>
-        <module>hapi</module>
         <module>liquibase</module>
         <module>reflectutils</module>
         <module>simplexml</module>
