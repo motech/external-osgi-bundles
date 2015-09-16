@@ -42,7 +42,6 @@
         <module>json</module>
         <module>ektorplucene</module>
         <module>jettison</module>
-        <module>dom4j</module>
         <module>aether-api</module>
         <module>xforms</module>
         <module>postgresql</module>
