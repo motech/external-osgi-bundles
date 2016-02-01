@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -8,17 +7,17 @@
 
     <properties>
         <modules.root.dir>${basedir}/..</modules.root.dir>
-        <module.version>1.1</module.version>
+        <module.version>9.6.0-2</module.version>
     </properties>
 
-    <groupId>org.apache.poi</groupId>
-    <artifactId>org.motechproject.ooxml-schemas</artifactId>
+    <groupId>net.sf.saxon</groupId>
+    <artifactId>org.motechproject.saxon-he</artifactId>
     <version>${module.version}-${release.tag}</version>
     <packaging>bundle</packaging>
 
-    <name>Apache POI OOXML Schemas</name>
-    <description>XmlBeans generated from the Ecma supplied xsds</description>
-    <url>http://poi.apache.org/</url>
+    <name>Saxon-HE</name>
+    <description>The XSLT and XQuery Processor</description>
+    <url>http://www.saxonica.com/</url>
 
     <parent>
         <groupId>org.motechproject</groupId>
@@ -28,15 +27,16 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>ooxml-schemas</artifactId>
+            <groupId>net.sf.saxon</groupId>
+            <artifactId>Saxon-HE</artifactId>
             <version>${module.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.apache.servicemix.bundles</groupId>
-            <artifactId>org.apache.servicemix.bundles.xmlbeans</artifactId>
-            <version>2.6.0_2</version>
+            <groupId>net.sf.saxon</groupId>
+            <artifactId>Saxon-HE</artifactId>
+            <version>${module.version}</version>
+            <classifier>xqj</classifier>
         </dependency>
     </dependencies>
 
@@ -53,21 +53,16 @@
                             *
                         </Import-Package>
                         <Export-Package>
-                            org.openxmlformats.schemas.*;version=${project.version},
-                            schemaorg_apache_xmlbeans.system.*;version=${project.version},
-                            schemasMicrosoftComOfficeExcel.*;version=${project.version},
-                            schemasMicrosoftComOfficeOffice.*;version=${project.version},
-                            schemasMicrosoftComOfficeWord.*;version=${project.version},
-                            schemasMicrosoftComOfficePowerpoint.*;version=${project.version},
-                            schemasMicrosoftComVml.*;version=${project.version}
+                            net.sf.saxon.*;version=${project.version},
+                            com.saxonica.xqj;version=${project.version},
+                            javax.xml.xquery;version=${project.version}
                         </Export-Package>
                         <DynamicImport-Package>*</DynamicImport-Package>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                        <Embed-Dependency>ooxml-schemas;inline=true</Embed-Dependency>
+                        <Embed-Dependency>Saxon-HE;inline=true</Embed-Dependency>
                     </instructions>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>
