@@ -56,6 +56,7 @@
         <module>spring-retry</module>
         <module>unitils</module>
         <module>poi-ooxml-schemas</module>
+        <module>saxon-he</module>
     </modules>
 
     <build>
