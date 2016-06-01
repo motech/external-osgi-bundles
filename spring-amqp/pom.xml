@@ -26,10 +26,9 @@
     </properties>
 
     <dependencies>
-
         <dependency>
             <groupId>org.springframework.amqp</groupId>
-		<artifactId>spring-amqp</artifactId>
+		    <artifactId>spring-amqp</artifactId>
             <version>${org.springframework.amqp.version}</version>
          </dependency>
     </dependencies>
@@ -51,7 +50,7 @@
                             <artifactItems>
                                 <artifactItem>
                                     <groupId>org.springframework.amqp</groupId>
-		<artifactId>spring-amqp</artifactId>
+                                    <artifactId>spring-amqp</artifactId>
                                     <version>${org.springframework.amqp.version}</version>
                                     <classifier>sources</classifier>
                                 </artifactItem>
@@ -72,9 +71,31 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
+                        <Import-Package>
+                            com.fasterxml.jackson.core;resolution:=optional,
+                            com.fasterxml.jackson.databind;resolution:=optional,
+                            com.fasterxml.jackson.databind.type;resolution:=optional,
+                            javax.xml.transform,
+                            javax.xml.transform.stream,
+                            org.aopalliance.intercept,
+                            org.apache.commons.logging;version="[1.1,2)",
+                            org.codehaus.jackson,
+                            org.codehaus.jackson.map,
+                            org.codehaus.jackson.map.type,
+                            org.codehaus.jackson.type,
+                            org.springframework.aop.framework,
+                            org.springframework.beans,
+                            org.springframework.beans.factory,
+                            org.springframework.core.serializer,
+                            org.springframework.oxm,
+                            org.springframework.remoting,
+                            org.springframework.remoting.rmi,
+                            org.springframework.remoting.support,
+                            org.springframework.util
+                        </Import-Package>
                         <Export-Package>
                             org.springframework.amqp.core.*,
-			    org.springframework.amqp.*
+                            org.springframework.amqp.*
                         </Export-Package>
                         <Bundle-Vendor>Spring</Bundle-Vendor>
                         <!--<Bundle-DocURL>https://github.com/KentBeck/junit/</Bundle-DocURL>-->
