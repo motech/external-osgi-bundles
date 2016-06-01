@@ -7,7 +7,7 @@
 
     <groupId>org.motechproject</groupId>
     <artifactId>external-osgi-bundles</artifactId>
-    <version>1.0.13</version> <!-- do not use parameter in version as maven fails to resolve it -->
+    <version>1.0.14</version> <!-- do not use parameter in version as maven fails to resolve it -->
     <packaging>pom</packaging>
     <name>MOTECH-external-bundles</name>
 
