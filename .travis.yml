@@ -1,0 +1,20 @@
+language: java
+jdk:
+  - oraclejdk8
+
+install: true
+
+script:
+  - sudo chmod +x ./run_build.sh
+  - ./run_build.sh
+
+cache:
+  directories:
+    - $HOME/.m2
+
+notifications:
+  email:
+    recipients:
+      - travis-test-maniek@googlegroups.com
+    on_success: never
+    on_failure: always
