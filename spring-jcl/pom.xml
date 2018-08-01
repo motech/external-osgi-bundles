@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
-    <modelVersion>4.0.0</modelVersion>
-
-    <groupId>org.springframework.retry</groupId>
-    <artifactId>org.motechproject.org.springframework.retry</artifactId>
-    <version>${org.springframework.retry.version}-${release.tag}</version>
-    <packaging>bundle</packaging>
-
-    <name>Spring Retry</name>
-    <description>Spring Retry library</description>
-
     <parent>
-        <groupId>org.motechproject</groupId>
         <artifactId>external-osgi-bundles</artifactId>
+        <groupId>org.motechproject</groupId>
         <version>1.0.14</version>
     </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.motechproject.org.springframework</groupId>
+    <artifactId>org.motechproject.org.springframework.spring-jcl</artifactId>
+    <version>${org.springframework.spring-jcl.version}.${release.tag}</version>
+    <packaging>bundle</packaging>
+    <name>Spring JCL</name>
+    <description>
+        Spring Commons Logging Bridge
+    </description>
+
 
     <properties>
         <modules.root.dir>${basedir}/..</modules.root.dir>
-        <org.springframework.retry.version>1.2.2.RELEASE</org.springframework.retry.version>
+        <org.springframework.spring-jcl.version>5.0.4.RELEASE</org.springframework.spring-jcl.version>
     </properties>
+
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.retry</groupId>
-            <artifactId>spring-retry</artifactId>
-            <version>${org.springframework.retry.version}</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jcl</artifactId>
+            <version>${org.springframework.spring-jcl.version}</version>
         </dependency>
     </dependencies>
 
@@ -49,9 +49,9 @@
                             <outputDirectory>${project.build.directory}/sources</outputDirectory>
                             <artifactItems>
                                 <artifactItem>
-                                    <groupId>org.springframework.retry</groupId>
-                                    <artifactId>spring-retry</artifactId>
-                                    <version>${org.springframework.retry.version}</version>
+                                    <groupId>org.springframework</groupId>
+                                    <artifactId>spring-jcl</artifactId>
+                                    <version>${org.springframework.spring-jcl.version}</version>
                                     <classifier>sources</classifier>
                                 </artifactItem>
                             </artifactItems>
@@ -71,19 +71,21 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
+                        <Import-Package>
+                            *
+                        </Import-Package>
                         <Export-Package>
-                            org.springframework.classify.*;version=${org.springframework.retry.version},
-			    org.springframework.retry.*;version=${org.springframework.retry.version}
+                            *;version=${org.springframework.spring-jcl.version}
                         </Export-Package>
                         <Bundle-Vendor>Spring</Bundle-Vendor>
-                        <!--<Bundle-DocURL>https://github.com/KentBeck/junit/</Bundle-DocURL>-->
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                        <Embed-Dependency>spring-retry;inline=true</Embed-Dependency>
+                        <Embed-Dependency>spring-jcl;inline=true</Embed-Dependency>
                     </instructions>
                 </configuration>
             </plugin>
 
         </plugins>
     </build>
+
 
 </project>

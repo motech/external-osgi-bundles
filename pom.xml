@@ -44,8 +44,8 @@
         <module>xforms</module>
         <module>postgresql</module>
         <module>wiser</module>
-        <module>liquibase</module>
-        <module>reflectutils</module>
+        <!--<module>liquibase</module>-->
+        <!--<module>reflectutils</module>-->
         <module>simplexml</module>
         <module>commons-configuration</module>
         <module>javax-time</module>
@@ -59,6 +59,9 @@
         <module>poi-ooxml-schemas</module>
         <module>saxon-he</module>
         <module>spring-security-openid</module>
+        <module>spring-integration-core</module>
+        <module>spring-integration-jms</module>
+        <module>spring-jcl</module>
     </modules>
 
     <build>
