@@ -22,7 +22,7 @@
 
     <properties>
         <modules.root.dir>${basedir}/..</modules.root.dir>
-        <org.springframework.retry.version>1.2.2.RELEASE</org.springframework.retry.version>
+        <org.springframework.retry.version>1.1.3.RELEASE</org.springframework.retry.version>
     </properties>
 
     <dependencies>
@@ -71,6 +71,13 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
+                        <Import-Package>
+                            javax.annotation,
+                            org.aopalliance.aop;resolution:=optional,
+                            org.aopalliance.intercept;resolution:=optional,
+                            org.apache.commons.logging;resolution:=optional,
+                            org.springframework.*
+                        </Import-Package>
                         <Export-Package>
                             org.springframework.classify.*;version=${org.springframework.retry.version},
 			    org.springframework.retry.*;version=${org.springframework.retry.version}

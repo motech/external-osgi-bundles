@@ -2,16 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>external-osgi-bundles</artifactId>
-        <groupId>org.motechproject</groupId>
-        <version>1.0.14</version>
-    </parent>
-    <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.motechproject.org.springframework.integration</groupId>
+    <groupId>org.springframework.integration</groupId>
     <artifactId>org.motechproject.org.springframework.integration.spring-integration-jms</artifactId>
-    <version>${org.springframework.integration.version}.${release.tag}</version>
+    <version>${org.springframework.integration.version}_${release.tag}</version>
     <packaging>bundle</packaging>
     <name>Spring Integration JMS</name>
     <description>
@@ -19,9 +13,17 @@
     </description>
 
 
+    <parent>
+        <artifactId>external-osgi-bundles</artifactId>
+        <groupId>org.motechproject</groupId>
+        <version>1.0.14</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
     <properties>
         <modules.root.dir>${basedir}/..</modules.root.dir>
-        <org.springframework.integration.version>5.0.4.RELEASE</org.springframework.integration.version>
+        <org.springframework.integration.version>4.3.12.RELEASE</org.springframework.integration.version>
+        <org.springframwork.retry.version></org.springframwork.retry.version>
     </properties>
 
 
@@ -72,10 +74,13 @@
                 <configuration>
                     <instructions>
                         <Import-Package>
-                            *
+                            javax.jms,
+                            org.apache.commons.logging;resolution:=optional,
+                            org.springframework.*,
+                            org.w3c.dom
                         </Import-Package>
                         <Export-Package>
-                            org.springframework.integration.jms;version=${org.springframework.integration.version}
+                            org.springframework.integration.jms.*
                         </Export-Package>
                         <Bundle-Vendor>Spring</Bundle-Vendor>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>

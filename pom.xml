@@ -22,46 +22,46 @@
     </properties>
 
     <modules>
-        <module>activemq</module>
-        <module>ektorp</module>
-        <module>gson</module>
-        <module>jackson</module>
-        <module>jsmpp</module>
-        <module>junit</module>
-        <module>kxml2</module>
-        <module>lambdaj</module>
-        <module>quartz</module>
-        <module>quartz-couchdb-store</module>
-        <module>smslib</module>
-        <module>stax</module>
-        <module>hibernate</module>
-        <module>xpp3</module>
-        <module>mvel</module>
-        <module>c3p0-fragment-bundle</module>
-        <module>json</module>
-        <module>jettison</module>
-        <module>aether-api</module>
-        <module>xforms</module>
-        <module>postgresql</module>
-        <module>wiser</module>
+        <!--<module>activemq</module>-->
+        <!--<module>ektorp</module>-->
+        <!--<module>gson</module>-->
+        <!--<module>jackson</module>-->
+        <!--<module>jsmpp</module>-->
+        <!--<module>junit</module>-->
+        <!--<module>kxml2</module>-->
+        <!--<module>lambdaj</module>-->
+        <!--<module>quartz</module>-->
+        <!--<module>quartz-couchdb-store</module>-->
+        <!--<module>smslib</module>-->
+        <!--<module>stax</module>-->
+        <!--<module>hibernate</module>-->
+        <!--<module>xpp3</module>-->
+        <!--<module>mvel</module>-->
+        <!--<module>c3p0-fragment-bundle</module>-->
+        <!--<module>json</module>-->
+        <!--<module>jettison</module>-->
+        <!--<module>aether-api</module>-->
+        <!--<module>xforms</module>-->
+        <!--<module>postgresql</module>-->
+        <!--<module>wiser</module>-->
         <!--<module>liquibase</module>-->
         <!--<module>reflectutils</module>-->
-        <module>simplexml</module>
-        <module>commons-configuration</module>
-        <module>javax-time</module>
-        <module>reflections</module>
-        <module>spring-batch-core</module>
-        <module>spring-batch-infrastructure</module>
-        <module>spring-amqp</module>
+        <!--<module>simplexml</module>-->
+        <!--<module>commons-configuration</module>-->
+        <!--<module>javax-time</module>-->
+        <!--<module>reflections</module>-->
+        <!--<module>spring-batch-core</module>-->
+        <!--<module>spring-batch-infrastructure</module>-->
+        <!--<module>spring-amqp</module>-->
         <module>spring-retry</module>
-        <module>spring-orm</module>
-        <module>unitils</module>
-        <module>poi-ooxml-schemas</module>
-        <module>saxon-he</module>
-        <module>spring-security-openid</module>
+        <!--<module>spring-orm</module>-->
+        <!--<module>unitils</module>-->
+        <!--<module>poi-ooxml-schemas</module>-->
+        <!--<module>saxon-he</module>-->
+        <!--<module>spring-security-openid</module>-->
         <module>spring-integration-core</module>
         <module>spring-integration-jms</module>
-        <module>spring-jcl</module>
+        <!--<module>spring-jcl</module>-->
     </modules>
 
     <build>
