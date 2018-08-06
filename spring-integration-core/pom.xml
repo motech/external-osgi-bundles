@@ -5,7 +5,7 @@
 
     <groupId>org.springframework.integration</groupId>
     <artifactId>org.motechproject.org.springframework.integration.spring-integration-core</artifactId>
-    <version>${org.springframework.integration.version}.${release.tag}</version>
+    <version>${org.springframework.integration.version}-${release.tag}</version>
     <packaging>bundle</packaging>
     <name>Spring Integration Core</name>
     <description>
