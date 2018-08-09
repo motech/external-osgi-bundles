@@ -58,7 +58,7 @@
         <!--<module>unitils</module>-->
         <!--<module>poi-ooxml-schemas</module>-->
         <!--<module>saxon-he</module>-->
-        <!--<module>spring-security-openid</module>-->
+        <module>spring-security-openid</module>
         <module>spring-integration-core</module>
         <module>spring-integration-jms</module>
         <!--<module>spring-jcl</module>-->
