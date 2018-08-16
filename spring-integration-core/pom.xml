@@ -35,6 +35,12 @@
             <groupId>org.springframework.integration</groupId>
             <artifactId>spring-integration-core</artifactId>
             <version>${org.springframework.integration.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-databind</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
@@ -80,9 +86,9 @@
                             com.esotericsoftware.kryo;resolution:=optional,
                             com.esotericsoftware.kryo.io;resolution:=optional,
                             com.esotericsoftware.kryo.pool;resolution:=optional,
-                            com.fasterxml.*,
                             com.jayway.jsonpath;resolution:=optional,
                             javax.xml.parsers,
+                            com.fasterxml.*;resolution:=optional,
                             org.aopalliance.aop;resolution:=optional,
                             org.aopalliance.intercept;resolution:=optional,
                             org.apache.commons.logging;resolution:=optional,
