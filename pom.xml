@@ -24,7 +24,7 @@
     <modules>
         <!--<module>activemq</module>-->
         <!--<module>ektorp</module>-->
-        <!--<module>gson</module>-->
+        <module>gson</module>
         <!--<module>jackson</module>-->
         <!--<module>jsmpp</module>-->
         <!--<module>junit</module>-->
@@ -49,7 +49,7 @@
         <!--<module>simplexml</module>-->
         <!--<module>commons-configuration</module>-->
         <!--<module>javax-time</module>-->
-        <!--<module>reflections</module>-->
+        <module>reflections</module>
         <!--<module>spring-batch-core</module>-->
         <!--<module>spring-batch-infrastructure</module>-->
         <!--<module>spring-amqp</module>-->
