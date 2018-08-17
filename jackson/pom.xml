@@ -22,7 +22,7 @@
 
     <properties>
         <modules.root.dir>${basedir}/../..</modules.root.dir>
-        <jackson.version>1.9.7</jackson.version>
+        <jackson.version>1.9.13</jackson.version>
     </properties>
 
     <dependencies>

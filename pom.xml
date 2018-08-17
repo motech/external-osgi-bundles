@@ -25,7 +25,8 @@
         <!--<module>activemq</module>-->
         <!--<module>ektorp</module>-->
         <module>gson</module>
-        <!--<module>jackson</module>-->
+        <module>jackson</module>
+        <module>guava</module>
         <!--<module>jsmpp</module>-->
         <!--<module>junit</module>-->
         <!--<module>kxml2</module>-->

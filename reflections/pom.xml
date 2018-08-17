@@ -55,7 +55,7 @@
                     <artifactId>guava</artifactId>
                 </exclusion>
                 <exclusion>
-                    <groupId>javassist</groupId>
+                    <groupId>org.javassist</groupId>
                     <artifactId>javassist</artifactId>
                 </exclusion>
                 <exclusion>
@@ -108,7 +108,6 @@
                     <instructions>
                         <Import-Package>
                             org.jboss.vfs.*;resolution:=optional,
-
                         </Import-Package>
                         <Export-Package>
                             org.reflections;version=${project.version},

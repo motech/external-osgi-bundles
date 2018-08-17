@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.google.guava</groupId>
+    <artifactId>org.motechproject.com.google.guava</artifactId>
+    <version>${guava.version}-${release.tag}</version>
+    <packaging>bundle</packaging>
+
+    <name>Guava</name>
+    <description>Google Guava library</description>
+
+    <parent>
+        <groupId>org.motechproject</groupId>
+        <artifactId>external-osgi-bundles</artifactId>
+        <version>1.0.14</version>
+    </parent>
+
+    <properties>
+        <modules.root.dir>${basedir}/../..</modules.root.dir>
+        <guava.version>20.0</guava.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.code.findbugs</groupId>
+                    <artifactId>jsr305</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>unpack-sources</id>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <phase>package</phase>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/sources</outputDirectory>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>com.google.guava</groupId>
+                                    <artifactId>guava</artifactId>
+                                    <version>${guava.version}</version>
+                                    <classifier>sources</classifier>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>3.5.1</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Export-Package>
+                            com.google.common.annotations;version="${project.version}",
+                            com.google.common.base;version="${project.version}";
+                            com.google.common.cache;version="${project.version}",
+                            com.google.common.collect;version="${project.version}",
+                            com.google.common.escape;version="${project.version}",
+                            com.google.common.graph;version="${project.version}"
+                            com.google.common.hash;version="${project.version}",
+                            com.google.common.html;version="${project.version}",
+                            com.google.common.io;version="${project.version}",
+                            com.google.common.math;version="${project.version}",
+                            com.google.common.net;version="${project.version}",
+                            com.google.common.primitives;version="${project.version}",
+                            com.google.common.reflect;version="${project.version}",
+                            com.google.common.util.concurrent;version="${project.version}",
+                            com.google.common.xml;version="${project.version}",
+                        </Export-Package>
+                        <Import-Package>
+                            javax.annotation;resolution:=optional,javax.crypto;resol
+                            ution:=optional,javax.crypto.spec;resolution:=optional,sun.misc;resolut
+                            ion:=optional
+                        </Import-Package>
+                        <Bundle-Vendor>Google Guava Project</Bundle-Vendor>
+                        <Bundle-DocURL>hhttps://mvnrepository.com/artifact/com.google.guava/guav</Bundle-DocURL>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Embed-Dependency>guava;inline=true</Embed-Dependency>
+                        <Embed-Transitive>false</Embed-Transitive>
+                    </instructions>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.5</version>
+                <executions>
+                    <execution>
+                        <id>copy-bundles</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${user.home}/.motech/bundles</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>target</directory>
+                                    <includes>
+                                        <include>*.jar</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
