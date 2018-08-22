@@ -62,7 +62,7 @@
         <module>spring-security-openid</module>
         <module>spring-integration-core</module>
         <module>spring-integration-jms</module>
-        <!--<module>spring-jcl</module>-->
+        <module>openid4java</module>
     </modules>
 
     <build>

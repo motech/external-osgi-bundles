@@ -72,7 +72,6 @@
 
     <build>
         <plugins>
-
             <plugin>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <executions>
@@ -108,6 +107,23 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
+                        <Import-package>
+                            javax.servlet.http,
+                            org.apache.commons.logging,
+                            org.openid4java.association,
+                            org.openid4java.consumer,
+                            org.openid4java.discovery,
+                            org.openid4java.message,
+                            org.openid4java.message.ax,
+                            org.springframework.beans.factory,
+                            org.springframework.security.authentication,
+                            org.springframework.security.core,
+                            org.springframework.security.core.authority.mapping,
+                            org.springframework.security.core.userdetails,
+                            org.springframework.security.web.authentication,
+                            org.springframework.security.web.authentication.rememberme,
+                            org.springframework.util
+                        </Import-package>
                         <Export-Package>
                             org.springframework.security.openid;version=${openid.version}
                         </Export-Package>
