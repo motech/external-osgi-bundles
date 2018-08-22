@@ -22,7 +22,7 @@
     </properties>
 
     <modules>
-        <!--<module>activemq</module>-->
+        <module>activemq</module>
         <!--<module>ektorp</module>-->
         <module>gson</module>
         <module>jackson</module>
