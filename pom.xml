@@ -65,6 +65,7 @@
         <module>spring-integration-jms</module>
         <module>openid4java</module>
         <module>spring-web</module>
+        <module>gemini-blueprint-extender</module>
     </modules>
 
     <build>
