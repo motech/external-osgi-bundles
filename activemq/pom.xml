@@ -116,6 +116,36 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
+                        <Import-Package>
+                            javax.annotation,javax.crypto,javax.crypto.spec,javax.ej
+                            b;resolution:=optional,javax.jmdns,javax.management,javax.management.openmbean,javax.managem
+                            ent.remote,javax.naming,javax.naming.directory,javax.naming.event,javax
+                            .naming.ldap,javax.naming.spi,javax.net,javax.net.ssl,javax.security.au
+                            th,javax.security.auth.callback,javax.security.auth.login,javax.securit
+                            y.auth.spi,javax.servlet,javax.servlet.http,javax.transaction.xa,javax.
+                            xml.namespace,javax.xml.parsers,javax.xml.xpath,org.apache.activemq.bro
+                            ker.cluster;version="[5.14,6)",org.apache.activemq.broker.region.cursor
+                            s;version="[5.14,6)",org.apache.activemq.broker.region.group;version="[
+                            5.14,6)",org.apache.activemq.broker.util;version="[5.14,6)",org.apache.
+                            activemq.memory;version="[5.14,6)",org.apache.activemq.memory.buffer;ve
+                            rsion="[5.14,6)",org.apache.activemq.memory.list;version="[5.14,6)",org
+                            .apache.activemq.network;version="[5.14,6)",org.apache.activemq.openwir
+                            e;version="[5.14,6)",org.apache.activemq.proxy;version="[5.14,6)",org.a
+                            pache.activemq.store;version="[5.14,6)",org.apache.activemq.store.memor
+                            y;version="[5.14,6)",org.apache.activemq.thread;version="[5.14,6)",org.
+                            apache.activemq.transport;version="[5.14,6)",org.apache.activemq.transp
+                            ort.auto;version="[5.14,6)",org.apache.activemq.transport.discovery;ver
+                            sion="[5.14,6)",org.apache.activemq.transport.discovery.simple;version=
+                            "[5.14,6)",org.apache.activemq.transport.failover;version="[5.14,6)",or
+                            g.apache.activemq.transport.nio;version="[5.14,6)",org.apache.activemq.
+                            transport.protocol;version="[5.14,6)",org.apache.activemq.transport.rel
+                            iable;version="[5.14,6)",org.apache.activemq.transport.tcp;version="[5.
+                            14,6)",org.apache.activemq.transport.udp;version="[5.14,6)",org.apache.
+                            activemq.transport.vm;version="[5.14,6)",org.apache.activemq.usage;vers
+                            ion="[5.14,6)",org.apache.activemq.wireformat;version="[5.14,6)",org.ap
+                            ache.commons.net.ftp;resolution:=optional,org.osgi.framework,org.osgi.framework.wiring,org.s
+                            lf4j;version="[1.7,2)",org.w3c.dom,org.xml.sax,
+                        </Import-Package>
                         <Export-Package>
                             org.apache.activemq.*;version=${project.version}
                         </Export-Package>
