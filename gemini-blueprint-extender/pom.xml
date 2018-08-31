@@ -137,7 +137,8 @@
                         </Export-Package>
                         <Bundle-Vendor>Eclipse</Bundle-Vendor>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                        <Embed-Dependency>gemini-blueprint-extender;inline=true</Embed-Dependency>
+                        <Embed-Dependency>gemini-blueprint-extender;inline=true,
+gemini-blueprint-core;inline=true,gemini-blueprint-io;inline=true</Embed-Dependency>
                     </instructions>
                 </configuration>
             </plugin>
