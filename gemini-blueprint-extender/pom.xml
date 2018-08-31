@@ -133,24 +133,11 @@
                             nal,org.osgi.service.cm;version="1.2";resolution:=optional
                         </Import-Package>
                         <Export-Package>
-                            org.eclipse.gemini.blueprint.extender;version="2.1.0.R
-                            ELEASE";uses:="org.eclipse.gemini.blueprint.context,org.eclipse.gemin
-                            i.blueprint.service.importer,org.osgi.framework,org.springframework.b
-                            eans,org.springframework.beans.factory.config",org.eclipse.gemini.blu
-                            eprint.extender.event;version="2.1.0.RELEASE";uses:="org.eclipse.gemi
-                            ni.blueprint.context.event,org.eclipse.gemini.blueprint.service.impor
-                            ter.event,org.osgi.framework,org.springframework.context",org.eclipse
-                            .gemini.blueprint.extender.support;version="2.1.0.RELEASE";uses:="org
-                            .eclipse.gemini.blueprint.context,org.eclipse.gemini.blueprint.extend
-                            er,org.eclipse.gemini.blueprint.extender.support.scanning,org.osgi.fr
-                            amework,org.springframework.beans.factory",org.eclipse.gemini.bluepri
-                            nt.extender.support.scanning;version="2.1.0.RELEASE";uses:="org.osgi.
-                            framework",org.osgi.service.blueprint;version=1;uses:="org.osgi.servi
-                            ce.blueprint.container,org.osgi.service.blueprint.reflect"
+                            org.eclipse.gemini.blueprint.extender,
                         </Export-Package>
                         <Bundle-Vendor>Eclipse</Bundle-Vendor>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                        <!--<Embed-Dependency>gemini-blueprint-extender;inline=true</Embed-Dependency>-->
+                        <Embed-Dependency>gemini-blueprint-extender;inline=true</Embed-Dependency>
                     </instructions>
                 </configuration>
             </plugin>
