@@ -51,6 +51,16 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <dependency>
+            <groupId>org.eclipse.gemini.blueprint</groupId>
+            <artifactId>gemini-blueprint-core</artifactId>
+            <version>${gemini.blueprint.extender.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.gemini.blueprint</groupId>
+            <artifactId>gemini-blueprint-io</artifactId>
+            <version>${gemini.blueprint.extender.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -91,54 +101,16 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Import-Package>
-                            org.osgi.service.blueprint.container;version="1.0.0";r
-                            esolution:=optional,org.osgi.framework;version="1.3",org.osgi.service
-                            .event;version="1.1";resolution:=optional,org.osgi.util.tracker;versi
-                            on="1.3",org.apache.commons.logging;version="[1.0,2.0)",
-                            <!--org.eclipse.g
-                            emini.blueprint.blueprint.container;version="[2.1.0.RELEASE,2.1.0.REL
-                            EASE]",org.eclipse.gemini.blueprint.blueprint.container.support;versi
-                            on="[2.1.0.RELEASE,2.1.0.RELEASE]", -->
-                            org.eclipse.gemini.blueprint;versi
-                            on="[2.1.0.RELEASE,2.1.0.RELEASE]",org.eclipse.gemini.blueprint.conte
-                            xt;version="[2.1.0.RELEASE,2.1.0.RELEASE]",org.eclipse.gemini.bluepri
-                            nt.context.event;version="[2.1.0.RELEASE,2.1.0.RELEASE]",org.eclipse.
-                            gemini.blueprint.context.support;version="[2.1.0.RELEASE,2.1.0.RELEAS
-                            E]",org.eclipse.gemini.blueprint.extender;version="[2.1.0.RELEASE,2.1
-                            .0.RELEASE]",org.eclipse.gemini.blueprint.extender.event;version="[2.
-                            1.0.RELEASE,2.1.0.RELEASE]",org.eclipse.gemini.blueprint.io;version="
-                            [2.1.0.RELEASE,2.1.0.RELEASE]",org.eclipse.gemini.blueprint.service.e
-                            xporter.support;version="[2.1.0.RELEASE,2.1.0.RELEASE]",org.eclipse.g
-                            emini.blueprint.service.importer;version="[2.1.0.RELEASE,2.1.0.RELEAS
-                            E]",org.eclipse.gemini.blueprint.service.importer.event;version="[2.1
-                            .0.RELEASE,2.1.0.RELEASE]",org.eclipse.gemini.blueprint.service.impor
-                            ter.support;version="[2.1.0.RELEASE,2.1.0.RELEASE]",org.eclipse.gemin
-                            i.blueprint.util;version="[2.1.0.RELEASE,2.1.0.RELEASE]",org.springfr
-                            amework.beans;version="[4.3.0,4.4)",org.springframework.beans.factory
-                            ;version="[4.3.0,4.4)",org.springframework.beans.factory.config;versi
-                            on="[4.3.0,4.4)",org.springframework.beans.factory.parsing;version="[
-                            4.3.0,4.4)",org.springframework.beans.factory.support;version="[4.3.0
-                            ,4.4)",org.springframework.beans.factory.xml;version="[4.3.0,4.4)",or
-                            g.springframework.context;version="[4.3.0,4.4)",org.springframework.c
-                            ontext.event;version="[4.3.0,4.4)",org.springframework.core;version="
-                            [4.3.0,4.4)",org.springframework.core.convert;version="[4.3.0,4.4)",o
-                            rg.springframework.core.io;version="[4.3.0,4.4)",org.springframework.
-                            core.io.support;version="[4.3.0,4.4)",org.springframework.core.task;v
-                            ersion="[4.3.0,4.4)",org.springframework.scheduling.concurrent;versio
-                            n="[4.3.0,4.4)",org.springframework.util;version="[4.3.0,4.4)",org.xm
-                            l.sax;resolution:=optional,org.eclipse.gemini.blueprint.extensions.an
-                            notation;resolution:=optional;version="[2.1.0.RELEASE,2.1.0.RELEASE]"
-                            ,org.osgi.service.blueprint.reflect;version="1.0.0";resolution:=optio
-                            nal,org.osgi.service.cm;version="1.2";resolution:=optional
-                        </Import-Package>
                         <Export-Package>
                             org.eclipse.gemini.blueprint.extender,
                         </Export-Package>
                         <Bundle-Vendor>Eclipse</Bundle-Vendor>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                        <Embed-Dependency>gemini-blueprint-extender;inline=true,
-gemini-blueprint-core;inline=true,gemini-blueprint-io;inline=true</Embed-Dependency>
+                        <Embed-Dependency>
+                            gemini-blueprint-extender;inline=true,
+                            gemini-blueprint-core;inline-true,
+                            gemini-blueprint-io;inline=true
+                        </Embed-Dependency>
                     </instructions>
                 </configuration>
             </plugin>
