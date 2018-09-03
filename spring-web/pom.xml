@@ -238,7 +238,7 @@
                             ework.web.multipart",org.springframework.web.util;version="4.3.12.REL
                             EASE";uses:="javax.servlet,javax.servlet.http,javax.servlet.jsp.tagex
                             t,org.apache.commons.logging,org.springframework.http,org.springframe
-                            work.util",javax.servlet;version=3.1.0,javax.servlet.http;version=3.1.0
+                            work.util"
                         </Export-Package>
                         <Import-Package>
                             com.squareup.okhttp.internal.http;resolution:=optional,
