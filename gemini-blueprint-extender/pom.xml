@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <groupId>org.eclipse.gemini.blueprint</groupId>
-    <artifactId>org.motechproject.org.eclipse.gemini.blueprint.gemini-blueprint-extender</artifactId>
+    <artifactId>org.motechproject.gemini-blueprint-extender</artifactId>
     <version>${gemini.blueprint.extender.version}-${release.tag}</version>
     <packaging>bundle</packaging>
     <name>Gemini Blueprint Extender</name>
@@ -55,6 +55,28 @@
             <groupId>org.eclipse.gemini.blueprint</groupId>
             <artifactId>gemini-blueprint-core</artifactId>
             <version>${gemini.blueprint.extender.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.servicemix.bundles</groupId>
+                    <artifactId>org.apache.servicemix.bundles.spring-beans</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.servicemix.bundles</groupId>
+                    <artifactId>org.apache.servicemix.bundles.spring-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.servicemix.bundles</groupId>
+                    <artifactId>org.apache.servicemix.bundles.spring-context</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.servicemix.bundles</groupId>
+                    <artifactId>org.apache.servicemix.bundles.spring-aop</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.servicemix.bundles</groupId>
+                    <artifactId>org.apache.servicemix.bundles.spring-expression</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.eclipse.gemini.blueprint</groupId>
@@ -84,6 +106,18 @@
                                     <version>${gemini.blueprint.extender.version}</version>
                                     <classifier>sources</classifier>
                                 </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.eclipse.gemini.blueprint</groupId>
+                                    <artifactId>gemini-blueprint-core</artifactId>
+                                    <version>${gemini.blueprint.extender.version}</version>
+                                    <classifier>sources</classifier>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.eclipse.gemini.blueprint</groupId>
+                                    <artifactId>gemini-blueprint-io</artifactId>
+                                    <version>${gemini.blueprint.extender.version}</version>
+                                    <classifier>sources</classifier>
+                                </artifactItem>
                             </artifactItems>
                         </configuration>
                     </execution>
@@ -101,15 +135,25 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
+                        <Bundle-Activator>org.eclipse.gemini.blueprint.extender.internal.boot.ChainActivator</Bundle-Activator>
                         <Export-Package>
-                            org.eclipse.gemini.blueprint.extender,
+                            org.eclipse.gemini.blueprint.extender.*,
+                            org.eclipse.gemini.blueprint.service.*,
+                            org.eclipse.gemini.blueprint.compendium.*,
+                            org.eclipse.gemini.blueprint.bundle.*,
+                            org.eclipse.gemini.blueprint.context.*,
+                            org.eclipse.gemini.blueprint.util.*,
+                            org.eclipse.gemini.blueprint.config.*,
+                            org.eclipse.gemini.blueprint.io.*,
+                            org.eclipse.gemini.blueprint.bundle.*,
+                            osgi.service.blueprint.*
                         </Export-Package>
                         <Bundle-Vendor>Eclipse</Bundle-Vendor>
-                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Bundle-SymbolicName>org.motechproject.gemini-blueprint-extender</Bundle-SymbolicName>
                         <Embed-Dependency>
-                            gemini-blueprint-extender;inline=true,
-                            gemini-blueprint-core;inline-true,
-                            gemini-blueprint-io;inline=true
+                            gemini-blueprint-core;inline=true,
+                            gemini-blueprint-io;inline=true,
+                            gemini-blueprint-extender;inline=true
                         </Embed-Dependency>
                     </instructions>
                 </configuration>
