@@ -108,8 +108,8 @@
                     <instructions>
                         <Import-Package>
                             org.jboss.vfs.*;resolution:=optional,
-                            com.google.common.base,
-                            com.google.common.collect,
+                            com.google.common.base;version="20.0.0.r034",
+                            com.google.common.collect;version="20.0.0.r034",
                             javassist.bytecode,
                             javassist.bytecode.annotation,
                         </Import-Package>
