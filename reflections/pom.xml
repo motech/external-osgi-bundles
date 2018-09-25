@@ -108,6 +108,7 @@
                     <instructions>
                         <Import-Package>
                             org.jboss.vfs.*;resolution:=optional,
+                            com.google.common.base,
                         </Import-Package>
                         <Export-Package>
                             org.reflections;version=${project.version},
