@@ -111,6 +111,7 @@
                             com.google.common.base,
                             com.google.common.collect,
                             javassist.bytecode,
+                            javassist.bytecode.annotation,
                         </Import-Package>
                         <Export-Package>
                             org.reflections;version=${project.version},
