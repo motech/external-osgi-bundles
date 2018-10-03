@@ -183,7 +183,7 @@
                         amework,org.springframework.beans.factory",org.eclipse.gemini.bluepri
                         nt.extender.support.scanning;version="2.1.0.RELEASE";uses:="org.osgi.
                         framework",org.osgi.service.blueprint;version=1;uses:="org.osgi.servi
-                        ce.blueprint.container,org.osgi.service.blueprint.reflect"</Export-Package>
+                        ce.blueprint.container,org.osgi.service.blueprint.reflect",org.eclipse.gemini.blueprint.blueprint.container</Export-Package>
                         <Bundle-Vendor>Eclipse</Bundle-Vendor>
                         <Bundle-SymbolicName>org.motechproject.gemini-blueprint-extender</Bundle-SymbolicName>
                         <Embed-Dependency>
