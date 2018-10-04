@@ -158,6 +158,7 @@
                             org.springframework.jdbc.core;resolution:=optional,
                             org.springframework.jdbc.core.support;resolution:=optional,
                             org.w3c.dom.html,
+                            org.w3c.dom,
                             org.xml.sax,
                             org.xml.sax.helpers,
                             sun.misc
