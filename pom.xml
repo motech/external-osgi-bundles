@@ -142,11 +142,18 @@
             <name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
             <url>http://repository.springsource.com/maven/bundles/external</url>
         </repository>
+
         <repository>
             <id>mvnrepository</id>
             <name>Maven Repository </name>
             <url>http://repo1.maven.org/maven2</url>
         </repository>
+        <repository>
+            <id>mvnrepository_Atlassian3rdPOld</id>
+            <name>mvnrepository_Atlassian3rdPOld</name>
+            <url>https://maven.atlassian.com/3rdparty/</url>
+        </repository>
+
     </repositories>
 
     <distributionManagement>
