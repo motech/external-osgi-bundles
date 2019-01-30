@@ -142,6 +142,11 @@
             <name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
             <url>http://repository.springsource.com/maven/bundles/external</url>
         </repository>
+        <repository>
+            <id>mvnrepository</id>
+            <name>Maven Repository </name>
+            <url>http://repo1.maven.org/maven2</url>
+        </repository>
     </repositories>
 
     <distributionManagement>
