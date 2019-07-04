@@ -17,47 +17,55 @@
     </description>
 
     <properties>
-        <jdk.version>1.7</jdk.version>
-        <release.tag>r033</release.tag>
+        <jdk.version>1.8</jdk.version>
+        <release.tag>r034</release.tag>
     </properties>
 
     <modules>
         <module>activemq</module>
-        <module>ektorp</module>
+        <!--<module>ektorp</module>-->
         <module>gson</module>
         <module>jackson</module>
-        <module>jsmpp</module>
-        <module>junit</module>
-        <module>kxml2</module>
+        <module>guava</module>
+        <!--<module>jsmpp</module>-->
+        <!--<module>junit</module>-->
+        <!--<module>kxml2</module>-->
         <module>lambdaj</module>
-        <module>quartz</module>
-        <module>quartz-couchdb-store</module>
-        <module>smslib</module>
-        <module>stax</module>
-        <module>hibernate</module>
-        <module>xpp3</module>
-        <module>mvel</module>
-        <module>c3p0-fragment-bundle</module>
-        <module>json</module>
-        <module>jettison</module>
+        <!--<module>quartz</module>-->
+        <!--<module>quartz-couchdb-store</module>-->
+        <!--<module>smslib</module>-->
+        <!--<module>stax</module>-->
+        <!--<module>hibernate</module>-->
+        <!--<module>xpp3</module>-->
+        <!--<module>mvel</module>-->
+        <!--<module>c3p0-fragment-bundle</module>-->
+        <!--<module>json</module>-->
+        <!--<module>jettison</module>-->
         <module>aether-api</module>
-        <module>xforms</module>
-        <module>postgresql</module>
-        <module>wiser</module>
-        <module>liquibase</module>
-        <module>reflectutils</module>
-        <module>simplexml</module>
-        <module>commons-configuration</module>
+        <!--<module>xforms</module>-->
+        <!--<module>postgresql</module>-->
+        <!--<module>wiser</module>-->
+        <!--<module>liquibase</module>-->
+        <!--<module>reflectutils</module>-->
+        <!--<module>simplexml</module>-->
+        <!--<module>commons-configuration</module>-->
         <module>javax-time</module>
         <module>reflections</module>
-        <module>spring-batch-core</module>
-        <module>spring-batch-infrastructure</module>
-        <module>spring-amqp</module>
+        <!--<module>spring-batch-core</module>-->
+        <!--<module>spring-batch-infrastructure</module>-->
+        <!--<module>spring-amqp</module>-->
         <module>spring-retry</module>
-        <module>spring-orm</module>
-        <module>unitils</module>
-        <module>poi-ooxml-schemas</module>
-        <module>saxon-he</module>
+        <!--<module>spring-orm</module>-->
+        <!--<module>unitils</module>-->
+        <!--<module>poi-ooxml-schemas</module>-->
+        <!--<module>saxon-he</module>-->
+        <module>spring-security-core</module>
+        <module>spring-security-openid</module>
+        <module>spring-integration-core</module>
+        <module>spring-integration-jms</module>
+        <module>openid4java</module>
+        <module>spring-web</module>
+        <module>gemini-blueprint-extender</module>
     </modules>
 
     <build>
@@ -104,7 +112,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.5.1</version>
+                <version>3.8.0</version>
                 <configuration>
                     <source>${jdk.version}</source>
                     <target>${jdk.version}</target>
@@ -134,6 +142,18 @@
             <name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
             <url>http://repository.springsource.com/maven/bundles/external</url>
         </repository>
+
+        <repository>
+            <id>mvnrepository</id>
+            <name>Maven Repository </name>
+            <url>http://repo1.maven.org/maven2</url>
+        </repository>
+        <repository>
+            <id>mvnrepository_Atlassian3rdPOld</id>
+            <name>mvnrepository_Atlassian3rdPOld</name>
+            <url>https://maven.atlassian.com/3rdparty/</url>
+        </repository>
+
     </repositories>
 
     <distributionManagement>

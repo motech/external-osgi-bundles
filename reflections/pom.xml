@@ -8,7 +8,7 @@
 
     <properties>
         <modules.root.dir>${basedir}/..</modules.root.dir>
-        <reflections.version>0.9.9</reflections.version>
+        <reflections.version>0.9.11</reflections.version>
     </properties>
 
     <groupId>org.reflections</groupId>
@@ -55,7 +55,7 @@
                     <artifactId>guava</artifactId>
                 </exclusion>
                 <exclusion>
-                    <groupId>javassist</groupId>
+                    <groupId>org.javassist</groupId>
                     <artifactId>javassist</artifactId>
                 </exclusion>
                 <exclusion>
@@ -83,17 +83,17 @@
         <dependency>
             <groupId>org.javassist</groupId>
             <artifactId>javassist</artifactId>
-            <version>3.18.1-GA</version>
+            <version>3.21.0-GA</version>
         </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>org.motechproject.com.google.code.gson</artifactId>
-            <version>1.7.1-${release.tag}</version>
+            <version>2.8.0-${release.tag}</version>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>18.0</version>
+            <version>20.0</version>
         </dependency>
     </dependencies>
 
@@ -102,13 +102,16 @@
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
-                <version>2.3.4</version>
+                <version>3.5.1</version>
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
                         <Import-Package>
                             org.jboss.vfs.*;resolution:=optional,
-                            *
+                            com.google.common.base;version="20.0.0.r034",
+                            com.google.common.collect;version="20.0.0.r034",
+                            javassist.bytecode,
+                            javassist.bytecode.annotation,
                         </Import-Package>
                         <Export-Package>
                             org.reflections;version=${project.version},
