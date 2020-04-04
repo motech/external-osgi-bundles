@@ -51,6 +51,7 @@
         <!--<module>commons-configuration</module>-->
         <module>javax-time</module>
         <module>reflections</module>
+        <module>bucket4j</module>
         <!--<module>spring-batch-core</module>-->
         <!--<module>spring-batch-infrastructure</module>-->
         <!--<module>spring-amqp</module>-->
