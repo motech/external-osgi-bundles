@@ -6,9 +6,9 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github</groupId>
-    <artifactId>org.motechproject.github.bucket4j</artifactId>
-    <version>4.1.1</version>
+    <groupId>com.github.vladimir-bukhtoyarov</groupId>
+    <artifactId>org.motechproject.com.github.vladimir-bukhtoyarov</artifactId>
+    <version>4.1.1-${release.tag}</version>
     <packaging>bundle</packaging>
 
     <name>bucket4j</name>
